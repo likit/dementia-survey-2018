@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <body>
+        <h1>Hello, Dementia</h1>
+        <nav>
+            <ul>
+                <li><a href="./">History</a></li>
+                <li><a href="./extensions">Extensions</a></li>
+                <li><a href="./settings">Settings</a></li>
+            </ul>
+        </nav>
+        <section id="content"></section>
+        <script id="settings-template" type="text/x-template">
+            <h2>Settings</h2>
+            <p>The default browser is currently Google chrome.</p>
+        </script>
+        <script id="extensions-template" type="text/x-template">
+            <h2>Extensions</h2>
+            <p>The extensions have been activated.</p>
+        </script>
+        <script id="history-template" type="text/x-template">
+            <h2>History</h2>
+            <p>The history will be displayed here.</p>
+        </script>
+        <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+        <script>
+            page.base('/chrome');
+            page('*', showActiveLink);
+            page('/', showHistory);
+            page('/extensions', showExtensions)
+            page('/settings', showSettings);
+            page();
+            function showActiveLink(ctx, next) {
+                deactivate();
+                console.log(ctx.path, ctx.init);
+                a(ctx.path).parentNode.classList.add('active');
+                next();
+            }
+            function showHistory(ctx) {
+                render(template('history'), !ctx.init);
+            }
+            function showExtensions(ctx) {
+                render(template('extensions'), !ctx.init);
+            }
+            function showSettings(ctx) {
+                render(template('settings'), !ctx.init);
+            }
+            function render(html, hide) {
+                var el = document.getElementById('content');
+                if(hide) {
+                    el.classList.add('hide');
+                    setTimeout(function() {
+                        el.innerHTML = html;
+                        el.classList.remove('hide');
+                    }, 300);
+                } else {
+                    el.innerHTML = html;
+                }
+            }
+            function deactivate() {
+                var el = document.querySelector('.active');
+                if(el) el.classList.remove('active');
+            }
+            function a(href) {
+                return document.querySelector('[href=".' + href + '"]');
+            }
+            function template(name) {
+                return document.getElementById(name + '-template').innerHTML;
+            }
+        </script>
+    </body>
+</html>

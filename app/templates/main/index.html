@@ -1,15 +1,42 @@
 <!doctype html>
-<html>
-    <body>
-        <h1>Hello, Dementia</h1>
-        <nav>
-            <ul>
-                <li><a href="./">History</a></li>
-                <li><a href="./extensions">Extensions</a></li>
-                <li><a href="./settings">Settings</a></li>
-            </ul>
-        </nav>
-        <section id="content"></section>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        </head>
+        <body>
+            <section class="hero is-success is-bold">
+                <div class="hero-body">
+                    <div class="container">
+                        <h2 class="title is-size-4 has-text-centered"><strong>ระบบบันทึกข้อมูลออนไลน์ (Online Case Report Form)</strong></h2>
+                        <h2 class="subtitle has-text-centered">
+                            โครงการวิจัยเรื่อง การศึกษาติดตามประเมินผลการรักษาผู้ป่วยสูงอายุภาวะสมองเสื่อมในสถานบริการและที่บ้าน
+                        </h2>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="columns">
+                    <div class="column is-one-quarter">
+                        <aside class="menu">
+                            <p class="menu-label">Menu</p>
+                            <ul class="menu-list">
+                                <li><a class="is-active" href="./">หน้าแรก</a></li>
+                                <li><a href="./">แบบประเมินผลการดูแลรักษาผู้ป่วยสูงอายุสมองเสื่อมที่บ้าน</a>
+                                    <ul class="menu-list">
+                                        <li><a href="./extensions">ข้อมูลสถานบริการ</a></li>
+                                        <li><a href="./settings">ข้อมูลผู้ป่วย</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="column">
+                        <div id="content"></div>
+                    </div>
+                </div>
+            </section>
         <script id="settings-template" type="text/x-template">
             <h2>Settings</h2>
             <p>The default browser is currently Google chrome.</p>
@@ -19,12 +46,40 @@
             <p>The extensions have been activated.</p>
         </script>
         <script id="history-template" type="text/x-template">
-            <h2>History</h2>
-            <p>The history will be displayed here.</p>
+            <article class="message is-info">
+                <div class="message-body">
+                    <strong>ยินดีต้อนรับสู่ระบบบันทึกข้อมูลวิจัยออนไลน์ ระบบประกอบไปด้วย</strong>
+                    <div class="content">
+                        <ul>
+                            <li>แบบประเมินการรักษาผู้ป่วยผู้สูงอายุสมองเสื่อมที่บ้าน
+                                <ul>
+                                    <li>ข้อมูลทั่วไปของสถานพยาบาล</li>
+                                    <li>ข้อมูลทั่วไปของญาติหรือผู้ดูแล</li>
+                                    <li>แบบติดตามประเมินผลการรักษา</li>
+                                    <li>แบบประเมินสิ่งแวดล้อม</li>
+                                    <li>แบบบันทึกการตรวจทางห้องปฏิบัติการ</li>
+                                    <li></li>
+                                </ul>
+                            </li>
+                            <li>แบบประเมินภาวะสุขภาพ 4 ด้าน
+                                <ul>
+                                    <li>แบบประเมินความสามารถในการทำกิจวัตรประจำวัน (ADL)</li>
+                                    <li>แบบประเมินภาวะซึมเศร้าสำหรับผู้สูงอายุไทย (TGDS)</li>
+                                    <li>แบบประเมินภาวะซึมเศร้าของญาติ (2Q)</li>
+                                    <li>แบบทดสอบสภาพสมองเสื่อมเบื้องต้นฉบับภาษาไทย (MMSE - Thai 2002)</li>
+                                    <li>การประเมินระดับความปวด (Pain Assessment)</li>
+                                    <li>แบบประเมินภาวะโภชนาการ (MNA: Mini Nutritional Assessment)</li>
+                                    <li>แบบประเมินทัศนคติและความรู้เกี่ยวกับภาวะสมองเสื่อมของญาติ</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
         </script>
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
         <script>
-            page.base('/chrome');
+            page.base('/survey');
             page('*', showActiveLink);
             page('/', showHistory);
             page('/extensions', showExtensions)
@@ -33,7 +88,7 @@
             function showActiveLink(ctx, next) {
                 deactivate();
                 console.log(ctx.path, ctx.init);
-                a(ctx.path).parentNode.classList.add('active');
+                a(ctx.path).parentNode.classList.add('is-active');
                 next();
             }
             function showHistory(ctx) {
@@ -58,8 +113,8 @@
                 }
             }
             function deactivate() {
-                var el = document.querySelector('.active');
-                if(el) el.classList.remove('active');
+                var el = document.querySelector('.is-active');
+                if(el) el.classList.remove('is-active');
             }
             function a(href) {
                 return document.querySelector('[href=".' + href + '"]');

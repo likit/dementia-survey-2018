@@ -23,23 +23,19 @@
                             <p class="menu-label">Menu</p>
                             <ul class="menu-list">
                                 <li><a class="is-active" data-bind="page-href:'start'">หน้าแรก</a></li>
-                                <li><a>แบบประเมินผลการดูแลรักษาผู้ป่วยสูงอายุสมองเสื่อมที่บ้าน</a>
+                                <li><a>ข้อมูลทั่วไปของสถานบริการทางสุขภาพ</a>
                                     <ul class="menu-list">
-                                        <li><a data-bind="page-href:'hospital'">ข้อมูลสถานบริการ</a></li>
-                                        <li><a data-bind="page-href:'settings'">ข้อมูลผู้ป่วย</a></li>
+                                        <li><a data-bind="page-href:'hospital'">ข้อมูลทั่วไปของสถานบริการสุขภาพ</a></li>
+                                        <li><a data-bind="page-href:'patientinfo'">ข้อมูลทั่วไป (ผู้ป่วยและญาติ/ผู้ดูแล)</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </aside>
                     </div>
                     <div class="column">
-                        <div data-bind="page: {id: 'settings'}">
-                            <h2>Settings</h2>
-                            <p>The default browser is currently Google chrome.</p>
-                        </div>
                         <div data-bind="page: {id: 'hospital'}">
                             <div class="box">
-                                <h2 class="subtitle">ค้นหาสถานพยาบาล</h2>
+                                <p class="label">สถานบริการสุขภาพ</p>
                                 <div class="field has-addons">
                                     <div class="control">
                                         <input class="input" data-bind="textInput: hospital"
@@ -54,8 +50,170 @@
                                 <ul data-bind="foreach: hospitals">
                                     <li><span data-bind="text: $data.name"></span></li>
                                 </ul>
+                                <div class="field">
+                                    <label class="label">ผู้เก็บข้อมูล</label>
+                                    <div class="control has-icons-left">
+                                        <input class="input is-danger" type="type" required placeholder="ชื่อ นามสกุล">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <p class="help is-danger">Required</p>
+                                </div>
+                                <div class="field">
+                                    <div class="control has-icons-left">
+                                        <input class="input" type="type" placeholder="ตำแหน่ง">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control has-icons-left">
+                                        <input class="input" type="type" placeholder="โทรศัพท์">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-phone"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control has-icons-left">
+                                        <input class="input" type="type" placeholder="อีเมล">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+                                <ul>
+                                    <li>
+                                        <a>
+                                            หน้าแรก&nbsp;
+                                            <span class="icon">
+                                                <i class="fa fa-arrow-circle-left"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            บันทึก&nbsp;
+                                            <span class="icon">
+                                                <i class="fa fa-save"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-bind="page-href: '../patientinfo'">
+                                            ข้อมูลทั่วไป (ผู้ป่วยและญาติ/ผู้ดูแล)&nbsp;
+                                            <span class="icon">
+                                                <i class="fa fa-arrow-circle-right"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> <!-- tabs -->
+                        </div> <!-- hospital page -->
+                        <div data-bind="page: {id: 'patientinfo'}">
+                            <div class="box">
+                                <h2><strong>ส่วนที่ 1</strong> ข้อมูล<strong>ผู้ป่วย</strong>สูงอายุภาวะสมองเสื่อม</h2>
+                                <div class="field is-horizontal">
+                                  <div class="field-body">
+                                      <div class="field">
+                                          <div class="control">
+                                              <input type="text" class="input is-danger" placeholder="ชื่อ">
+                                          </div>
+                                          <p class="help is-danger">Required</p>
+                                      </div>
+                                      <div class="field">
+                                          <div class="control">
+                                              <input type="text" class="input is-danger" placeholder="นามสกุล">
+                                          </div>
+                                          <p class="help is-danger">Required</p>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                  <div class="field-body">
+                                      <div class="field">
+                                          <div class="control">
+                                              <input type="text" class="input" placeholder="บ้านเลขที่">
+                                          </div>
+                                      </div>
+                                      <div class="field">
+                                          <div class="control">
+                                              <input type="text" class="input" placeholder="หมู่ที่">
+                                          </div>
+                                      </div>
+                                      <div class="field">
+                                          <div class="control">
+                                              <input type="text" class="input" placeholder="ตำบล">
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                  <div class="field-body">
+                                      <div class="field">
+                                          <div class="control">
+                                              <input type="text" class="input" placeholder="อำเภอ">
+                                          </div>
+                                      </div>
+                                      <div class="field">
+                                          <div class="control">
+                                              <input type="text" class="input" placeholder="จังหวัด">
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              <h2>ข้อมูลผู้สอบถาม</h2>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <input class="input is-danger" type="text" placeholder="ชื่อผู้สอบถาม" required>
+                                            <p class="help is-danger">Required</p>
+                                        </div>
+                                        <div class="field">
+                                            <input class="input is-danger" type="text" placeholder="เลขที่บัตรประชาชน" required>
+                                            <p class="help is-danger">Required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">วันที่ทำแบบสอบถาม</label>
+                                    <input class="input is-danger" type="date" required>
+                                    <p class="help is-danger">Required</p>
+                                </div>
+                            </div> <!-- box -->
+                            <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+                                <ul>
+                                    <li>
+                                        <a data-bind="page-href: '../hospital'">
+                                            ข้อมูลทั่วไปสถานบริการ&nbsp;
+                                            <span class="icon">
+                                                <i class="fa fa-arrow-circle-left"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            บันทึก&nbsp;
+                                            <span class="icon">
+                                                <i class="fa fa-save"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-bind="page-href: '../patientinfo'">
+                                            ข้อมูลทั่วไป (ผู้ป่วยและญาติ/ผู้ดูแล)&nbsp;
+                                            <span class="icon">
+                                                <i class="fa fa-arrow-circle-right"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> <!-- tabs -->
+                        </div> <!-- setting page -->
                         <div data-bind="page: {id: 'start'}">
                             <article class="message is-info">
                                 <div class="message-body">

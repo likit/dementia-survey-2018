@@ -1,6 +1,6 @@
 <div data-bind="page: {id: 'hospital'}">
   <div class="box">
-    <p class="label">สถานบริการสุขภาพ</p>
+    <h1 class="label is-size-5">สถานบริการสุขภาพ</h1>
     <div class="field has-addons">
       <div class="control">
         <input class="input" data-bind="textInput: hospital"
@@ -15,8 +15,9 @@
     <ul data-bind="foreach: hospitals">
       <li><span data-bind="text: $data.name"></span></li>
     </ul>
+    <br><hr>
     <div class="field">
-      <label class="label">ผู้เก็บข้อมูล</label>
+      <label class="label is-size-5">ผู้เก็บข้อมูล</label>
       <div class="control has-icons-left">
         <input class="input is-danger" type="type" required placeholder="ชื่อ นามสกุล">
         <span class="icon is-small is-left">

@@ -29,11 +29,8 @@
                                         <li><a data-bind="page-href:'patientinfo'">ข้อมูลทั่วไป (ผู้ป่วยและญาติ/ผู้ดูแล)</a></li>
                                     </ul>
                                 </li>
-                                <li><a>การประเมินผลการรักษาผู้ป่วยสูงอายุสมองเสื่อมที่บ้าน</a>
-                                    <ul>
-                                        <li><a data-bind="page-href:'nursingcare'">การดูแลด้านการพยาบาล</a></li>
-                                    </ul>
-                                </li>
+                                <li><a data-bind="page-href:'nursingcare'">การประเมินผลการรักษาผู้ป่วยสูงอายุสมองเสื่อมที่บ้าน</a></li>
+                                <li><a data-bind="page-href:'healthcare'">การเข้าถึงระบบบริการสุขภาพ</a></li>
                             </ul>
                         </aside>
                     </div>
@@ -41,7 +38,8 @@
                       {% include "main/hospital.html" %}
                       {% include "main/mainpage.html" %}
                       {% include "main/patientinfo.html" %}
-                        {% include "main/nursingcare.html" %}
+                      {% include "main/nursingcare.html" %}
+                      {% include "main/healthcare.html" %}
                     </div> <!-- column -->
                 </div>
             </section>

@@ -1,0 +1,454 @@
+<h2 class="is-size-4"><strong>ส่วนที่ 2</strong> ข้อมูล<strong>ญาติ/ผู้ดูแล</strong> (ผู้ดูแลรอง)</h2>
+<hr>
+<div class="field">
+  <input class="input is-danger" type="text" placeholder="ชื่อผู้สอบถาม" required>
+  <p class="help is-danger">Required</p>
+</div>
+<div class="field">
+  <label class="label">วันที่ทำแบบสอบถาม</label>
+  <input class="input is-danger" type="date" required>
+  <p class="help is-danger">Required</p>
+</div>
+<br>
+<div class="field is-horizontal">
+  <div class="field-body">
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input is-danger" placeholder="ชื่อ">
+      </div>
+      <p class="help is-danger">Required</p>
+    </div>
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input is-danger" placeholder="นามสกุล">
+      </div>
+      <p class="help is-danger">Required</p>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <input class="input is-danger" type="text" placeholder="เลขที่บัตรประชาชน" required>
+  <p class="help is-danger">Required</p>
+</div>
+<div class="field is-horizontal">
+  <div class="field-body">
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input" placeholder="บ้านเลขที่">
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input" placeholder="หมู่ที่">
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input" placeholder="ตำบล">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="field is-horizontal">
+  <div class="field-body">
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input" placeholder="อำเภอ">
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input" placeholder="จังหวัด">
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table is-striped">
+  <thead>
+  <tr>
+    <th>ข้อ</th>
+    <th>คำถาม</th>
+    <th>คำตอบ</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1.</td>
+    <td>เพศ</td>
+    <td colspan="2">
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>ชาย</option>
+              <option>หญิง</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>อายุ</td>
+    <td colspan="2">
+      <div class="field">
+        <div class="control">
+          <input type="number" step="1" placeholder="ปี" class="input">
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>สถานภาพสมรส</td>
+    <td colspan="2">
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>สมรส/คู่</option>
+              <option>หม้าย</option>
+              <option>หย่า/แยก</option>
+              <option>โสด</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td>ศาสนา</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>พุทธ</option>
+              <option>คริสต์</option>
+              <option>อิสลาม</option>
+              <option>อื่นๆ</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="text">
+          <p class="help">โปรดระบุศาสนา</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>5.</td>
+    <td>การศึกษา</td>
+    <td colspan="2">
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>ไม่ได้เรียน</option>
+              <option>ไม่จบประถมศึกษา</option>
+              <option>ประถมศึกษา</option>
+              <option>มัธยมศึกษาตอนต้น</option>
+              <option>มัธยมศึกษาตอนปลาย / ปวช.</option>
+              <option>อนุปริญญา / ปวส.</option>
+              <option>ปริญญาตรี</option>
+              <option>สูงกว่าปริญญาตรี</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>6.</td>
+    <td>ความเกี่ยวข้องกับผู้ป่วย</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>พ่อ/แม่</option>
+              <option>สามี/ภรรยา</option>
+              <option>บุตร</option>
+              <option>พี่น้อง</option>
+              <option>อื่นๆ</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="text">
+          <p class="help">โปรดระบุความเกี่ยวข้องอื่นๆ</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>7.</td>
+    <td>อาชีพ</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>ไม่ได้ทำงาน/ทำงานบ้าน</option>
+              <option>เกษตรกรรม</option>
+              <option>รับจ้างแรงงาน/พนักงานบริษัท</option>
+              <option>ค้าขาย/ธุรกิจส่วนตัว</option>
+              <option>รับราชการ/พนักงานของรัฐ</option>
+              <option>พนักงานรัฐวิสาหกิจ</option>
+              <option>อื่นๆ</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="text">
+          <p class="help">โปรดระบุอาชีพอื่นๆ</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>8.</td>
+    <td>รายได้</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>ไม่เพียงพอ/มีหนี้สิน</option>
+              <option>ไม่เพียงพอ/ไม่มีหนี้สิน</option>
+              <option>พอเพียง ไม่เหลือเก็บ</option>
+              <option>พอเพียง เหลือเก็บ</option>
+              <option>มั่นคง สามารถซื้อสิ่งของได้ตามต้องการ</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input" type="number" step="0.1" placeholder="เฉลี่ยรายได้ทั้งหมด">
+          <p class="help">ทุกแหล่งที่มาของรายได้</p>
+        </div>
+        <p class="control">
+          <a class="button is-static">บาท</a>
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>9.</td>
+    <td>ปัญหาค่าใช้จ่าย</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>มี</option>
+              <option>ไม่มี</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <p class="help">โปรดระบุถ้ามี</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>10.</td>
+    <td>โรคประจำตัว</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select is-multiple">
+            <select multiple>
+              <option selected>ไม่มี</option>
+              <option>เบาหวาน</option>
+              <option>ความดันโลหิตสูง</option>
+              <option>ไขมันในเลือดสูง</option>
+              <option>โรคหัวใจ</option>
+              <option>อื่นๆ</option>
+            </select>
+          </div>
+          <p class="help">กดปุ่ม Ctrl ค้างไว้เพื่อเลือกมากกว่าหนึ่งรายการ</p>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <p class="help">โปรดระบุโรคประจำตัวอื่นๆ</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>11.</td>
+    <td>ระยะเวลาในการดูแลผู้ป่วย</td>
+    <td colspan="2">
+      <div class="field is-grouped">
+        <div class="control is-expanded">
+          <input type="number" class="input" placeholder="วัน">
+        </div>
+        <div class="control is-expanded">
+          <input type="number" class="input" placeholder="เดือน">
+        </div>
+        <div class="control is-expanded">
+          <input type="number" class="input" placeholder="ปี">
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>12.</td>
+    <td>เหตุผลในการดูแลผู้ป่วย (ตอบได้มากกว่า 1 ข้อ)</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select is-multiple">
+            <select multiple>
+              <option selected>หน้าที่/ความรับผิดชอบ</option>
+              <option>ความรัก/ความผูกพัน</option>
+              <option>ไม่มีใครดูแล</option>
+              <option>อื่นๆ</option>
+            </select>
+          </div>
+          <p class="help">กดปุ่ม Ctrl ค้างไว้เพื่อเลือกมากกว่าหนึ่งรายการ</p>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <p class="help">โปรดระบุเหตุผลอื่นๆ</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>13.</td>
+    <td>ภาระหน้าที่อื่นๆนอกเหนือจากการดูแลผู้ป่วย</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>มี</option>
+              <option>ไม่มี</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <p class="help">โปรดระบุถ้ามี</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>14.</td>
+    <td>ผู้ช่วยในการดูแลผู้ป่วย</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>มี</option>
+              <option>มี แต่ไม่สม่ำเสมอ</option>
+              <option>ไม่มี</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <p class="help">โปรดระบุจำนวนคนถ้ามี</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>15.</td>
+    <td>ท่านเคยได้รับคำแนะนำหรือการฝึกทักษะการดูแลผู้ป่วยสมองเสื่อมหรือไม่</td>
+    <td colspan="2">
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>เคย</option>
+              <option>ไม่เคย</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>16.</td>
+    <td>ท่านเคยมีประสบการณ์ในการดูแลผู้ป่วยสมองเสื่อมหรือไม่</td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>โปรดระบุ</option>
+              <option>เคย</option>
+              <option>ไม่เคย</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="text" placeholder="ระยะเวลา">
+          <p class="help">โปรดระบุระยะเวลาถ้าเคย</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

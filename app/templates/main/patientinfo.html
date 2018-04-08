@@ -1,0 +1,333 @@
+<div data-bind="page: {id: 'patientinfo'}">
+  <div class="box">
+    <h2 class="is-size-4"><strong>ข้อมูลผู้สอบถาม</strong></h2>
+    <hr>
+    <div class="field">
+      <input class="input is-danger" type="text" placeholder="ชื่อผู้สอบถาม" required>
+      <p class="help is-danger">Required</p>
+    </div>
+    <div class="field">
+      <label class="label">วันที่ทำแบบสอบถาม</label>
+      <input class="input is-danger" type="date" required>
+      <p class="help is-danger">Required</p>
+    </div>
+    <br>
+    <h2 class="is-size-4"><strong>ส่วนที่ 1</strong> ข้อมูล<strong>ผู้ป่วย</strong>สูงอายุภาวะสมองเสื่อม</h2>
+    <hr>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input is-danger" placeholder="ชื่อ">
+          </div>
+          <p class="help is-danger">Required</p>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input is-danger" placeholder="นามสกุล">
+          </div>
+          <p class="help is-danger">Required</p>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <input class="input is-danger" type="text" placeholder="เลขที่บัตรประชาชน" required>
+      <p class="help is-danger">Required</p>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input" placeholder="บ้านเลขที่">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input" placeholder="หมู่ที่">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input" placeholder="ตำบล">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input" placeholder="อำเภอ">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input" placeholder="จังหวัด">
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table is-striped">
+      <thead>
+      <tr>
+        <th>ข้อ</th>
+        <th>คำถาม</th>
+        <th>คำตอบ</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1.</td>
+        <td>เพศ</td>
+        <td colspan="2">
+          <div class="field">
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option value="">โปรดเลือก</option>
+                  <option>ชาย</option>
+                  <option>หญิง</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>อายุ</td>
+        <td colspan="2">
+          <div class="field">
+            <div class="control">
+              <input class="input" placeholder="ปี">
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>วันที่จำหน่ายออกจากรพ.</td>
+        <td colspan="2">
+          <div class="field">
+            <div class="control">
+              <input type="date" class="input">
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>การวินิจฉัย</td>
+        <td colspan="2">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text">
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>ภาวะแทรกซ้อนหลังกลับจากรพ.</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>โปรดเลือก</option>
+                  <option>มี</option>
+                  <option>ไม่มี</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text">
+              <p class="help">โปรดระบุ ถ้ามี</p>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>ประวัติการกลับเข้ารับการรักษาในรพ.</td>
+        <td colspan="2">
+          <table class="table is-narrow">
+            <tr>
+              <td>
+                <div class="field">
+                  <div class="control">
+                    <div class="select">
+                      <select>
+                        <option>โปรดเลือกขนาดโรงพยาบาล</option>
+                        <option>โรงพยาบาลศูนย์ (A)</option>
+                        <option>โรงพยาบาลทั่วไประดับจังหวัด (S)</option>
+                        <option>โรงพยาบาลชุมชนแม่ข่าย (M2)</option>
+                        <option>โรงพยาบาลทั่วไปขนาดเล็ก (M1)</option>
+                        <option>โรงพยาบาลชุมชนขนาดเล็ก (F3)</option>
+                        <option>โรงพยาบาลชุมชนขนาดกลาง (F2)</option>
+                        <option>โรงพยาบาลชุมชนขนาดใหญ่ (F1)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="field">
+                  <label class="label">วันที่</label>
+                  <div class="control">
+                    <input type="date" class="input">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="number" step="1" placeholder="จำนวนครั้ง">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text" placeholder="โรค/ปัญหา">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="number" placeholder="จำนวนวันที่นอนรพ.">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="field">
+                  <div class="control">
+                    <div class="select">
+                      <select>
+                        <option>โปรดเลือกภาวะแทรกซ้อนที่พบ</option>
+                        <option>มี</option>
+                        <option>ไม่มี</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text">
+                    <p class="help">โปรดระบุ ถ้ามี</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td>ระดับคะแนน ADL</td>
+        <td colspan="2">
+          <div class="field">
+            <div class="control">
+              <input type="number" step="0.1" class="input">
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>8.</td>
+        <td>น้ำหนักตัว (กก.)</td>
+        <td colspan="2">
+          <div class="field">
+            <div class="control">
+              <input type="number" step="0.1" class="input">
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>9.</td>
+        <td>การหกล้มใน 1 ปีที่ผ่านมา</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>โปรดเลือก</option>
+                  <option>เคย</option>
+                  <option>ไม่เคย</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field is-grouped">
+            <div class="control">
+              <input type="number" step="any" class="input" placeholder="จำนวนครั้ง">
+              <p class="help">ถ้าเคยโปรดระบุ</p>
+            </div>
+            <div class="control">
+              <input type="text" class="input" placeholder="บาดเจ็บที่">
+              <p class="help">ถ้าเคยโปรดระบุ</p>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table> <!-- table part 1 -->
+    <progress class="progress is-success" value="30" max="100">30%</progress>
+    <br>
+    {% include "main/patientinfo-2.html" %}
+    <br>
+    <progress class="progress is-success" value="60" max="100">60%</progress>
+    {% include "main/patientinfo-3.html" %}
+  </div> <!-- box -->
+  <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+    <ul>
+      <li>
+        <a data-bind="page-href: '../hospital'">
+          ข้อมูลทั่วไปสถานบริการ&nbsp;
+          <span class="icon">
+              <i class="fa fa-arrow-circle-left"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a>
+          บันทึก&nbsp;
+          <span class="icon">
+              <i class="fa fa-save"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a data-bind="page-href: '../patientinfo'">
+          ข้อมูลทั่วไป (ผู้ป่วยและญาติ/ผู้ดูแล)&nbsp;
+          <span class="icon">
+              <i class="fa fa-arrow-circle-right"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div> <!-- tabs -->
+</div> <!-- setting page -->

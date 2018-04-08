@@ -1,12 +1,13 @@
 <h2 class="is-size-4"><strong>ส่วนที่ 2</strong> ข้อมูล<strong>ญาติ/ผู้ดูแล</strong> (ผู้ดูแลรอง)</h2>
 <hr>
 <div class="field">
-  <input class="input is-danger" type="text" placeholder="ชื่อผู้สอบถาม" required>
+  <input class="input is-danger" type="text" placeholder="ชื่อผู้สอบถาม" required
+         data-bind="value: surveyorName">
   <p class="help is-danger">Required</p>
 </div>
 <div class="field">
   <label class="label">วันที่ทำแบบสอบถาม</label>
-  <input class="input is-danger" type="date" required>
+  <input class="input is-danger" type="date" required data-bind="value: surveyDate">
   <p class="help is-danger">Required</p>
 </div>
 <br>
@@ -14,37 +15,43 @@
   <div class="field-body">
     <div class="field">
       <div class="control">
-        <input type="text" class="input is-danger" placeholder="ชื่อ">
+        <input type="text" class="input is-danger" placeholder="ชื่อ"
+               data-bind="value: minorCarerFirstname">
       </div>
       <p class="help is-danger">Required</p>
     </div>
     <div class="field">
       <div class="control">
-        <input type="text" class="input is-danger" placeholder="นามสกุล">
+        <input type="text" class="input is-danger" placeholder="นามสกุล"
+               data-bind="value: minorCarerLastname">
       </div>
       <p class="help is-danger">Required</p>
     </div>
   </div>
 </div>
 <div class="field">
-  <input class="input is-danger" type="text" placeholder="เลขที่บัตรประชาชน" required>
+  <input class="input is-danger" type="text" placeholder="เลขที่บัตรประชาชน" required
+         data-bind="value: minorCarerPID">
   <p class="help is-danger">Required</p>
 </div>
 <div class="field is-horizontal">
   <div class="field-body">
     <div class="field">
       <div class="control">
-        <input type="text" class="input" placeholder="บ้านเลขที่">
+        <input type="text" class="input" placeholder="บ้านเลขที่"
+               data-bind="value: minorCarerAddress">
       </div>
     </div>
     <div class="field">
       <div class="control">
-        <input type="text" class="input" placeholder="หมู่ที่">
+        <input type="text" class="input" placeholder="หมู่ที่"
+               data-bind="value: minorCarerVillage">
       </div>
     </div>
     <div class="field">
       <div class="control">
-        <input type="text" class="input" placeholder="ตำบล">
+        <input type="text" class="input" placeholder="ตำบล"
+               data-bind="value: minorCarerSubDistrict">
       </div>
     </div>
   </div>
@@ -53,12 +60,14 @@
   <div class="field-body">
     <div class="field">
       <div class="control">
-        <input type="text" class="input" placeholder="อำเภอ">
+        <input type="text" class="input" placeholder="อำเภอ"
+               data-bind="value: minorCarerDistrict">
       </div>
     </div>
     <div class="field">
       <div class="control">
-        <input type="text" class="input" placeholder="จังหวัด">
+        <input type="text" class="input" placeholder="จังหวัด"
+               data-bind="value: minorCarerProvince">
       </div>
     </div>
   </div>
@@ -73,6 +82,10 @@
   </tr>
   </thead>
   <tbody>
+  <col width="5%">
+  <col width="30%">
+  <col width="40%">
+  <col width="25%">
   <tr>
     <td>1.</td>
     <td>เพศ</td>
@@ -80,10 +93,10 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>ชาย</option>
-              <option>หญิง</option>
+            <select data-bind="value: minorCarerGender">
+              <option value="">โปรดระบุ</option>
+              <option value="male">ชาย</option>
+              <option value="female">หญิง</option>
             </select>
           </div>
         </div>
@@ -96,7 +109,8 @@
     <td colspan="2">
       <div class="field">
         <div class="control">
-          <input type="number" step="1" placeholder="ปี" class="input">
+          <input type="number" step="1" placeholder="ปี" class="input"
+                 data-bind="value: minorCarerAge">
         </div>
       </div>
     </td>
@@ -108,12 +122,12 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>สมรส/คู่</option>
-              <option>หม้าย</option>
-              <option>หย่า/แยก</option>
-              <option>โสด</option>
+            <select data-bind="value: minorCarerMarital">
+              <option value="">โปรดระบุ</option>
+              <option value="1">สมรส/คู่</option>
+              <option value="2">หม้าย</option>
+              <option value="3">หย่า/แยก</option>
+              <option value="4">โสด</option>
             </select>
           </div>
         </div>
@@ -127,12 +141,12 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>พุทธ</option>
-              <option>คริสต์</option>
-              <option>อิสลาม</option>
-              <option>อื่นๆ</option>
+            <select data-bind="value: minorCarerReligion">
+              <option value="">โปรดระบุ</option>
+              <option value="1">พุทธ</option>
+              <option value="2">คริสต์</option>
+              <option value="3">อิสลาม</option>
+              <option value="4">อื่นๆ</option>
             </select>
           </div>
         </div>
@@ -141,7 +155,8 @@
     <td>
       <div class="field">
         <div class="control">
-          <input class="input" type="text">
+          <input class="input" type="text"
+                 data-bind="value: minorCarerReligionOther, enable: minorCarerReligion() === '4'">
           <p class="help">โปรดระบุศาสนา</p>
         </div>
       </div>
@@ -154,16 +169,16 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>ไม่ได้เรียน</option>
-              <option>ไม่จบประถมศึกษา</option>
-              <option>ประถมศึกษา</option>
-              <option>มัธยมศึกษาตอนต้น</option>
-              <option>มัธยมศึกษาตอนปลาย / ปวช.</option>
-              <option>อนุปริญญา / ปวส.</option>
-              <option>ปริญญาตรี</option>
-              <option>สูงกว่าปริญญาตรี</option>
+            <select data-bind="value: minorCarerEd">
+              <option value="">โปรดระบุ</option>
+              <option value="1">ไม่ได้เรียน</option>
+              <option value="2">ไม่จบประถมศึกษา</option>
+              <option value="3">ประถมศึกษา</option>
+              <option value="4">มัธยมศึกษาตอนต้น</option>
+              <option value="5">มัธยมศึกษาตอนปลาย / ปวช.</option>
+              <option value="6">อนุปริญญา / ปวส.</option>
+              <option value="7">ปริญญาตรี</option>
+              <option value="8">สูงกว่าปริญญาตรี</option>
             </select>
           </div>
         </div>
@@ -177,13 +192,13 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>พ่อ/แม่</option>
-              <option>สามี/ภรรยา</option>
-              <option>บุตร</option>
-              <option>พี่น้อง</option>
-              <option>อื่นๆ</option>
+            <select data-bind="value: minorCarerRelation">
+              <option value="">โปรดระบุ</option>
+              <option value="1">พ่อ/แม่</option>
+              <option value="2">สามี/ภรรยา</option>
+              <option value="3">บุตร</option>
+              <option value="4">พี่น้อง</option>
+              <option value="5">อื่นๆ</option>
             </select>
           </div>
         </div>
@@ -192,7 +207,8 @@
     <td>
       <div class="field">
         <div class="control">
-          <input class="input" type="text">
+          <input class="input" type="text"
+                 data-bind="value: minorCarerRelationOther, enable: minorCarerRelation() === '5'">
           <p class="help">โปรดระบุความเกี่ยวข้องอื่นๆ</p>
         </div>
       </div>
@@ -205,15 +221,15 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>ไม่ได้ทำงาน/ทำงานบ้าน</option>
-              <option>เกษตรกรรม</option>
-              <option>รับจ้างแรงงาน/พนักงานบริษัท</option>
-              <option>ค้าขาย/ธุรกิจส่วนตัว</option>
-              <option>รับราชการ/พนักงานของรัฐ</option>
-              <option>พนักงานรัฐวิสาหกิจ</option>
-              <option>อื่นๆ</option>
+            <select data-bind="value: minorCarerCareer">
+              <option value="">โปรดระบุ</option>
+              <option value="1">ไม่ได้ทำงาน/ทำงานบ้าน</option>
+              <option value="2">เกษตรกรรม</option>
+              <option value="3">รับจ้างแรงงาน/พนักงานบริษัท</option>
+              <option value="4">ค้าขาย/ธุรกิจส่วนตัว</option>
+              <option value="5">รับราชการ/พนักงานของรัฐ</option>
+              <option value="6">พนักงานรัฐวิสาหกิจ</option>
+              <option value="7">อื่นๆ</option>
             </select>
           </div>
         </div>
@@ -222,7 +238,8 @@
     <td>
       <div class="field">
         <div class="control">
-          <input class="input" type="text">
+          <input class="input" type="text"
+                 data-bind="value: minorCarerCareerOther, enable: minorCarerCareer() === '7'">
           <p class="help">โปรดระบุอาชีพอื่นๆ</p>
         </div>
       </div>
@@ -235,13 +252,13 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>ไม่เพียงพอ/มีหนี้สิน</option>
-              <option>ไม่เพียงพอ/ไม่มีหนี้สิน</option>
-              <option>พอเพียง ไม่เหลือเก็บ</option>
-              <option>พอเพียง เหลือเก็บ</option>
-              <option>มั่นคง สามารถซื้อสิ่งของได้ตามต้องการ</option>
+            <select data-bind="value: minorCarerIncome">
+              <option value="">โปรดระบุ</option>
+              <option value="1">ไม่เพียงพอ/มีหนี้สิน</option>
+              <option value="2">ไม่เพียงพอ/ไม่มีหนี้สิน</option>
+              <option value="3">พอเพียง ไม่เหลือเก็บ</option>
+              <option value="4">พอเพียง เหลือเก็บ</option>
+              <option value="5">มั่นคง สามารถซื้อสิ่งของได้ตามต้องการ</option>
             </select>
           </div>
         </div>
@@ -250,7 +267,8 @@
     <td>
       <div class="field has-addons">
         <div class="control">
-          <input class="input" type="number" step="0.1" placeholder="เฉลี่ยรายได้ทั้งหมด">
+          <input class="input" type="number" step="0.1"
+                 placeholder="เฉลี่ยรายได้ทั้งหมด" data-bind="value: minorCarerAvgIncome">
           <p class="help">ทุกแหล่งที่มาของรายได้</p>
         </div>
         <p class="control">
@@ -266,10 +284,10 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>มี</option>
-              <option>ไม่มี</option>
+            <select data-bind="value: minorCarerIncomeProblem">
+              <option value="">โปรดระบุ</option>
+              <option value="yes">มี</option>
+              <option value="no">ไม่มี</option>
             </select>
           </div>
         </div>
@@ -278,7 +296,8 @@
     <td>
       <div class="field">
         <div class="control">
-          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <input class="input" type="text" placeholder="รายละเอียด"
+                 data-bind="value: minorCarerIncomeProblemDetail, enable: minorCarerIncomeProblem() === 'yes'">
           <p class="help">โปรดระบุถ้ามี</p>
         </div>
       </div>
@@ -291,13 +310,13 @@
       <div class="field">
         <div class="control">
           <div class="select is-multiple">
-            <select multiple>
-              <option selected>ไม่มี</option>
-              <option>เบาหวาน</option>
-              <option>ความดันโลหิตสูง</option>
-              <option>ไขมันในเลือดสูง</option>
-              <option>โรคหัวใจ</option>
-              <option>อื่นๆ</option>
+            <select multiple data-bind="selectedOptions: minorCarerHealthProblems">
+              <option selected value="none">ไม่มี</option>
+              <option value="1">เบาหวาน</option>
+              <option value="2">ความดันโลหิตสูง</option>
+              <option value="3">ไขมันในเลือดสูง</option>
+              <option value="4">โรคหัวใจ</option>
+              <option value="5">อื่นๆ</option>
             </select>
           </div>
           <p class="help">กดปุ่ม Ctrl ค้างไว้เพื่อเลือกมากกว่าหนึ่งรายการ</p>
@@ -307,7 +326,8 @@
     <td>
       <div class="field">
         <div class="control">
-          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <input class="input" type="text" placeholder="รายละเอียด"
+                 data-bind="value: minorCarerHealthProblemDetail">
           <p class="help">โปรดระบุโรคประจำตัวอื่นๆ</p>
         </div>
       </div>
@@ -319,13 +339,16 @@
     <td colspan="2">
       <div class="field is-grouped">
         <div class="control is-expanded">
-          <input type="number" class="input" placeholder="วัน">
+          <input type="number" class="input" placeholder="วัน"
+                 data-bind="value: minorCarerTimeDay">
         </div>
         <div class="control is-expanded">
-          <input type="number" class="input" placeholder="เดือน">
+          <input type="number" class="input" placeholder="เดือน"
+                 data-bind="value: minorCarerTimeMonth">
         </div>
         <div class="control is-expanded">
-          <input type="number" class="input" placeholder="ปี">
+          <input type="number" class="input" placeholder="ปี"
+                 data-bind="value: minorCarerTimeYear">
         </div>
       </div>
     </td>
@@ -337,11 +360,11 @@
       <div class="field">
         <div class="control">
           <div class="select is-multiple">
-            <select multiple>
-              <option selected>หน้าที่/ความรับผิดชอบ</option>
-              <option>ความรัก/ความผูกพัน</option>
-              <option>ไม่มีใครดูแล</option>
-              <option>อื่นๆ</option>
+            <select multiple data-bind="selectedOptions: minorCarerReasons">
+              <option selected value="">หน้าที่/ความรับผิดชอบ</option>
+              <option value="1">ความรัก/ความผูกพัน</option>
+              <option value="2">ไม่มีใครดูแล</option>
+              <option value="3">อื่นๆ</option>
             </select>
           </div>
           <p class="help">กดปุ่ม Ctrl ค้างไว้เพื่อเลือกมากกว่าหนึ่งรายการ</p>
@@ -351,7 +374,8 @@
     <td>
       <div class="field">
         <div class="control">
-          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <input class="input" type="text"
+                 placeholder="รายละเอียด" data-bind="value: minorCarerReasonsOther">
           <p class="help">โปรดระบุเหตุผลอื่นๆ</p>
         </div>
       </div>
@@ -364,10 +388,10 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>มี</option>
-              <option>ไม่มี</option>
+            <select data-bind="value: minorCarerHasBurden">
+              <option value="">โปรดระบุ</option>
+              <option value="yes">มี</option>
+              <option value="no">ไม่มี</option>
             </select>
           </div>
         </div>
@@ -376,7 +400,8 @@
     <td>
       <div class="field">
         <div class="control">
-          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <input class="input" type="text" placeholder="รายละเอียด"
+                 data-bind="value: minorCarerBurden, enable: minorCarerHasBurden() === 'yes'">
           <p class="help">โปรดระบุถ้ามี</p>
         </div>
       </div>
@@ -389,11 +414,11 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>มี</option>
-              <option>มี แต่ไม่สม่ำเสมอ</option>
-              <option>ไม่มี</option>
+            <select data-bind="value: minorCarerHasAssistant">
+              <option value="">โปรดระบุ</option>
+              <option value="1">มี</option>
+              <option value="2">มี แต่ไม่สม่ำเสมอ</option>
+              <option value="3">ไม่มี</option>
             </select>
           </div>
         </div>
@@ -402,7 +427,8 @@
     <td>
       <div class="field">
         <div class="control">
-          <input class="input" type="number" step="0.1" placeholder="รายละเอียด">
+          <input class="input" type="number" step="1" min="0" placeholder="จำนวน"
+                 data-bind="value: minorCarerNumAssistant, enable: minorCarerHasAssistant() !== '3'">
           <p class="help">โปรดระบุจำนวนคนถ้ามี</p>
         </div>
       </div>
@@ -415,10 +441,10 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>เคย</option>
-              <option>ไม่เคย</option>
+            <select data-bind="value: minorCarerHasTrained">
+              <option value="">โปรดระบุ</option>
+              <option value="1">เคย</option>
+              <option value="2">ไม่เคย</option>
             </select>
           </div>
         </div>
@@ -432,10 +458,10 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select>
-              <option>โปรดระบุ</option>
-              <option>เคย</option>
-              <option>ไม่เคย</option>
+            <select data-bind="value: minorCarerHasExp">
+              <option value="">โปรดระบุ</option>
+              <option value="1">เคย</option>
+              <option value="2">ไม่เคย</option>
             </select>
           </div>
         </div>
@@ -444,7 +470,8 @@
     <td>
       <div class="field">
         <div class="control">
-          <input class="input" type="text" placeholder="ระยะเวลา">
+          <input class="input" type="text" placeholder="ระยะเวลา"
+                 data-bind="value: minorCarerExpDuration, enable: minorCarerHasExp() === '1'">
           <p class="help">โปรดระบุระยะเวลาถ้าเคย</p>
         </div>
       </div>
@@ -452,3 +479,4 @@
   </tr>
   </tbody>
 </table>
+

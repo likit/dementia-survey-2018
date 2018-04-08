@@ -1,6 +1,6 @@
 <div data-bind="page: {id: 'hospital'}">
   <div class="box">
-    <h1 class="label is-size-5">สถานบริการสุขภาพ</h1>
+    <h1 class="label is-size-5">สถานบริการสุขภาพ <span data-bind="text: hospital"></span> </h1>
     <div class="field has-addons">
       <div class="control">
         <input class="input" data-bind="textInput: hospital"
@@ -19,35 +19,39 @@
     <div class="field">
       <label class="label is-size-5">ผู้เก็บข้อมูล</label>
       <div class="control has-icons-left">
-        <input class="input is-danger" type="type" required placeholder="ชื่อ นามสกุล">
+        <input class="input is-danger" type="text"
+          data-bind="value: surveyorName" placeholder="ชื่อ นามสกุล">
         <span class="icon is-small is-left">
-                                            <i class="fa fa-user"></i>
-                                        </span>
+          <i class="fa fa-user"></i>
+        </span>
       </div>
       <p class="help is-danger">Required</p>
     </div>
     <div class="field">
       <div class="control has-icons-left">
-        <input class="input" type="type" placeholder="ตำแหน่ง">
+        <input class="input" type="text" placeholder="ตำแหน่ง"
+          data-bind="value: surveyorPosition">
         <span class="icon is-small is-left">
-                                            <i class="fa fa-star"></i>
-                                        </span>
+          <i class="fa fa-star"></i>
+        </span>
       </div>
     </div>
     <div class="field">
       <div class="control has-icons-left">
-        <input class="input" type="type" placeholder="โทรศัพท์">
+        <input class="input" type="text" placeholder="โทรศัพท์"
+          data-bind="value: surveyorTel">
         <span class="icon is-small is-left">
-                                            <i class="fa fa-phone"></i>
-                                        </span>
+          <i class="fa fa-phone"></i>
+        </span>
       </div>
     </div>
     <div class="field">
       <div class="control has-icons-left">
-        <input class="input" type="type" placeholder="อีเมล">
+        <input class="input" type="text" placeholder="อีเมล"
+          data-bind="value: surveyorEmail">
         <span class="icon is-small is-left">
-                                            <i class="fa fa-envelope"></i>
-                                        </span>
+          <i class="fa fa-envelope"></i>
+        </span>
       </div>
     </div>
   </div>
@@ -57,24 +61,24 @@
         <a>
           หน้าแรก&nbsp;
           <span class="icon">
-                                                <i class="fa fa-arrow-circle-left"></i>
-                                            </span>
+            <i class="fa fa-arrow-circle-left"></i>
+          </span>
         </a>
       </li>
       <li>
         <a>
           บันทึก&nbsp;
           <span class="icon">
-                                                <i class="fa fa-save"></i>
-                                            </span>
+            <i class="fa fa-save"></i>
+          </span>
         </a>
       </li>
       <li>
         <a data-bind="page-href: '../patientinfo'">
           ข้อมูลทั่วไป (ผู้ป่วยและญาติ/ผู้ดูแล)&nbsp;
           <span class="icon">
-                                                <i class="fa fa-arrow-circle-right"></i>
-                                            </span>
+            <i class="fa fa-arrow-circle-right"></i>
+          </span>
         </a>
       </li>
     </ul>

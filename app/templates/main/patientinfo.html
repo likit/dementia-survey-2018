@@ -5,12 +5,14 @@
     <h2 class="is-size-4"><strong>ข้อมูลผู้สอบถาม</strong></h2>
     <hr>
     <div class="field">
-      <input class="input is-danger" type="text" placeholder="ชื่อผู้สอบถาม" required>
+      <input class="input is-danger" type="text"
+        data-bind="value: surveyorName" ชื่อผู้สอบถาม" required>
       <p class="help is-danger">Required</p>
     </div>
     <div class="field">
       <label class="label">วันที่ทำแบบสอบถาม</label>
-      <input class="input is-danger" type="date" required>
+      <input class="input is-danger" type="date" required
+        data-bind="value: surveyDate">
       <p class="help is-danger">Required</p>
     </div>
     <br>
@@ -20,37 +22,43 @@
       <div class="field-body">
         <div class="field">
           <div class="control">
-            <input type="text" class="input is-danger" placeholder="ชื่อ">
+            <input type="text" class="input is-danger" placeholder="ชื่อ"
+              data-bind="value: pntFirstName">
           </div>
           <p class="help is-danger">Required</p>
         </div>
         <div class="field">
           <div class="control">
-            <input type="text" class="input is-danger" placeholder="นามสกุล">
+            <input type="text" class="input is-danger" placeholder="นามสกุล"
+              data-bind="value: pntLastName">
           </div>
           <p class="help is-danger">Required</p>
         </div>
       </div>
     </div>
     <div class="field">
-      <input class="input is-danger" type="text" placeholder="เลขที่บัตรประชาชน" required>
+      <input class="input is-danger" type="text"
+        data-bind="value: pntPID" เลขที่บัตรประชาชน" required>
       <p class="help is-danger">Required</p>
     </div>
     <div class="field is-horizontal">
       <div class="field-body">
         <div class="field">
           <div class="control">
-            <input type="text" class="input" placeholder="บ้านเลขที่">
+            <input type="text" class="input" placeholder="บ้านเลขที่"
+              data-bind="value: pntAddress">
           </div>
         </div>
         <div class="field">
           <div class="control">
-            <input type="text" class="input" placeholder="หมู่ที่">
+            <input type="text" class="input" placeholder="หมู่ที่"
+              data-bind="value: pntVillage">
           </div>
         </div>
         <div class="field">
           <div class="control">
-            <input type="text" class="input" placeholder="ตำบล">
+            <input type="text" class="input" placeholder="ตำบล"
+              data-bind="value: pntSubDistrict">
           </div>
         </div>
       </div>
@@ -59,12 +67,14 @@
       <div class="field-body">
         <div class="field">
           <div class="control">
-            <input type="text" class="input" placeholder="อำเภอ">
+            <input type="text" class="input" placeholder="อำเภอ"
+              data-bind="value: pntDistrict">
           </div>
         </div>
         <div class="field">
           <div class="control">
-            <input type="text" class="input" placeholder="จังหวัด">
+            <input type="text" class="input" placeholder="จังหวัด"
+              data-bind="value: pntProvince">
           </div>
         </div>
       </div>
@@ -86,10 +96,10 @@
           <div class="field">
             <div class="control">
               <div class="select">
-                <select>
+                <select data-bind="value: pntGender">
                   <option value="">โปรดเลือก</option>
-                  <option>ชาย</option>
-                  <option>หญิง</option>
+                  <option value="male">ชาย</option>
+                  <option value="female">หญิง</option>
                 </select>
               </div>
             </div>
@@ -102,7 +112,7 @@
         <td colspan="2">
           <div class="field">
             <div class="control">
-              <input class="input" placeholder="ปี">
+              <input class="input" data-bind="value: pntAge" placeholder="ปี">
             </div>
           </div>
         </td>
@@ -113,7 +123,8 @@
         <td colspan="2">
           <div class="field">
             <div class="control">
-              <input type="date" class="input">
+              <input type="date" class="input"
+                data-bind="value: pntDischargedDate">
             </div>
           </div>
         </td>
@@ -124,7 +135,8 @@
         <td colspan="2">
           <div class="field">
             <div class="control">
-              <input class="input" type="text">
+              <input class="input" type="text"
+                data-bind="value: pntDiagnosis">
             </div>
           </div>
         </td>
@@ -136,10 +148,10 @@
           <div class="field">
             <div class="control">
               <div class="select">
-                <select>
-                  <option>โปรดเลือก</option>
-                  <option>มี</option>
-                  <option>ไม่มี</option>
+                <select data-bind="value: pntHasComplications">
+                  <option value="">โปรดเลือก</option>
+                  <option value="yes">มี</option>
+                  <option value="no">ไม่มี</option>
                 </select>
               </div>
             </div>
@@ -148,7 +160,8 @@
         <td>
           <div class="field">
             <div class="control">
-              <input class="input" type="text">
+              <input class="input" type="text"
+                data-bind="value: pntComplications, enable: pntHasComplications() === 'yes'">
               <p class="help">โปรดระบุ ถ้ามี</p>
             </div>
           </div>
@@ -164,7 +177,7 @@
                 <div class="field">
                   <div class="control">
                     <div class="select">
-                      <select>
+                      <select data-bind="value: pntRtnHospitalSize">
                         <option>โปรดเลือกขนาดโรงพยาบาล</option>
                         <option>โรงพยาบาลศูนย์ (A)</option>
                         <option>โรงพยาบาลทั่วไประดับจังหวัด (S)</option>
@@ -184,7 +197,7 @@
                 <div class="field">
                   <label class="label">วันที่</label>
                   <div class="control">
-                    <input type="date" class="input">
+                    <input type="date" class="input" data-bind="value: pntRtnDate">
                   </div>
                 </div>
               </td>
@@ -193,7 +206,8 @@
               <td>
                 <div class="field">
                   <div class="control">
-                    <input class="input" type="number" step="1" placeholder="จำนวนครั้ง">
+                    <input class="input" type="number" step="1"
+                      data-bind="value: pntRtnTimes" placeholder="จำนวนครั้ง">
                   </div>
                 </div>
               </td>
@@ -202,7 +216,8 @@
               <td>
                 <div class="field">
                   <div class="control">
-                    <input class="input" type="text" placeholder="โรค/ปัญหา">
+                    <input class="input" type="text"
+                      placeholder="โรค/ปัญหา" data-bind="value: pntRtnProblem">
                   </div>
                 </div>
               </td>
@@ -211,7 +226,8 @@
               <td>
                 <div class="field">
                   <div class="control">
-                    <input class="input" type="number" placeholder="จำนวนวันที่นอนรพ.">
+                    <input class="input" type="number"
+                      placeholder="จำนวนวันที่นอนรพ." data-bind="value: pntRtnStayDays">
                   </div>
                 </div>
               </td>
@@ -221,10 +237,10 @@
                 <div class="field">
                   <div class="control">
                     <div class="select">
-                      <select>
-                        <option>โปรดเลือกภาวะแทรกซ้อนที่พบ</option>
-                        <option>มี</option>
-                        <option>ไม่มี</option>
+                      <select data-bind="value: pntRtnHasComplications">
+                        <option value="">โปรดเลือกภาวะแทรกซ้อนที่พบ</option>
+                        <option value="yes">มี</option>
+                        <option value="no">ไม่มี</option>
                       </select>
                     </div>
                   </div>
@@ -235,7 +251,8 @@
               <td>
                 <div class="field">
                   <div class="control">
-                    <input class="input" type="text">
+                    <input class="input" type="text"
+                      data-bind="value: pntRtnComplications, enable: pntRtnHasComplications() === 'yes'">
                     <p class="help">โปรดระบุ ถ้ามี</p>
                   </div>
                 </div>
@@ -250,7 +267,8 @@
         <td colspan="2">
           <div class="field">
             <div class="control">
-              <input type="number" step="0.1" class="input">
+              <input type="number" step="0.1" class="input"
+                data-bind="value: pntADLScore">
             </div>
           </div>
         </td>
@@ -261,7 +279,8 @@
         <td colspan="2">
           <div class="field">
             <div class="control">
-              <input type="number" step="0.1" class="input">
+              <input type="number" step="0.1" class="input"
+                data-bind="value: pntWeight">
             </div>
           </div>
         </td>
@@ -273,10 +292,10 @@
           <div class="field">
             <div class="control">
               <div class="select">
-                <select>
-                  <option>โปรดเลือก</option>
-                  <option>เคย</option>
-                  <option>ไม่เคย</option>
+                <select data-bind="value: pntHasFallen">
+                  <option value="">โปรดเลือก</option>
+                  <option value="yes">เคย</option>
+                  <option value="no">ไม่เคย</option>
                 </select>
               </div>
             </div>
@@ -284,12 +303,14 @@
         </td>
         <td>
           <div class="field is-grouped">
-            <div class="control">
-              <input type="number" step="any" class="input" placeholder="จำนวนครั้ง">
+            <div class="control is-expanded">
+              <input type="number" step="any" class="input" placeholder="จำนวนครั้ง"
+                data-bind="value: pntFallTimes, enable: pntHasFallen() === 'yes'">
               <p class="help">ถ้าเคยโปรดระบุ</p>
             </div>
-            <div class="control">
-              <input type="text" class="input" placeholder="บาดเจ็บที่">
+            <div class="control is-expanded">
+              <input type="text" class="input" placeholder="บาดเจ็บที่"
+                data-bind="value: pntHurtAt, enable: pntHasFallen() === 'yes'">
               <p class="help">ถ้าเคยโปรดระบุ</p>
             </div>
           </div>

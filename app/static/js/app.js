@@ -254,6 +254,25 @@ var ViewModel = function() {
     self.hcare_32 = ko.observable();
     self.hcare_33 = ko.observable();
     self.hcare_34 = ko.observable();
+
+    self.env_1 = ko.observable();
+    self.env_2 = ko.observable();
+    self.env_3 = ko.observable();
+    self.env_4 = ko.observable();
+    self.env_5 = ko.observable();
+    self.env_6 = ko.observable();
+    self.env_7 = ko.observable();
+    self.env_8 = ko.observable();
+    self.env_9 = ko.observable();
+    self.env_10 = ko.observable();
+    self.env_11 = ko.observable();
+    self.env_12 = ko.observable();
+    self.env_13 = ko.observable();
+    self.env_14 = ko.observable();
+    self.env_15 = ko.observable();
+    self.env_16 = ko.observable();
+    self.env_17 = ko.observable();
+    self.env_18 = ko.observable();
 }
 var vm = new ViewModel();
 pager.extendWithPage(vm);

@@ -13,8 +13,8 @@
       <tbody>
       <col width="5%">
       <col width="30%">
-      <col width="30%">
-      <col width="35%">
+      <col width="60%">
+      <col width="5%">
       <tr>
         <td>1.</td>
         <td>Feeding (รับประทานอาหารเมื่อเตรียมไว้ให้เรียบร้อยต่อหน้า)</td>
@@ -34,6 +34,177 @@
           </div>
         </td>
         <td><span data-bind="text: adl_1"></span></td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Grooming (ล้างหน้า, หวีผม, แปรงฟัน, โกนหนวด, ในระยะ 24-48 ชั่วโมงที่ผ่านมา)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_2">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">ต้องการความช่วยเหลือ</option>
+                  <option value="1">ทำได้เอง รวมทั้งที่ทำไoptionถ้าเตรียมอุปกรณ์ไว้ให้</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_2"></span></td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Transfer (ลุกนั่งจากที่นอน หรือจากเตียงไปยังเก้าอี้)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_3">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">ไม่สามารถนั่งได้ (นั่งแล้วจะล้มเสมอ) หรือต้องใช้คนสองคนช่วยกันยกขึ้น</option>
+                  <option value="1">ต้องการความช่วยเหลืออย่างมากถึงจะนั่งได้ เช่นต้องใช้คนที่แข็งแรงหรือมีทักษะ 1 คนหรือใช้คนทั่วไป 2 คนพยุง หรือดันขึ้นมาจึงจะนั่งได้</option>
+                  <option value="2">ต้องการความช่วยเหลือบ้าง เช่น บอกให้ทำตาม หรือช่วยพยุงเล็กน้อย หรือต้องมีคนดูแลเพื่อความปลอดภัย</option>
+                  <option value="3">ทำได้เอง</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_3"></span></td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>Toilet use (การใช้ห้องสุขา)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_4">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">ช่วยตัวเองไม่ได้</option>
+                  <option value="1">ทำเองได้บ้าง (อย่างน้อยทำความสะอาดตัวเองได้หลังเสร็จธุระ) แต่ต้องการความช่วยเหลือบ้างในบางครั้ง</option>
+                  <option value="2">ช่วยตัวเองได้ดี (ขึ้นนั่งและลงจากโถส้วมได้เอง, ทำความสะอาดได้เรียบร้อยหลังจากเสร็จธุระ, ถอดใส่เสื้อผ้าได้เรียบร้อย)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_4"></span></td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>Mobility (การเคลื่อนที่ภายในห้องหรือภายในบ้าน)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_5">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">เคลื่อนที่ไปไหนไม่ได้</option>
+                  <option value="1">ต้องใช้รถเข็นช่วยตัวเองให้เคลื่อนที่ได้เอง (ไม่ต้องมีคนเข็นให้) และจะต้องเข้าออกมุมหรือประตูห้องได้</option>
+                  <option value="2">เดินหรือเคลื่อนที่โดยมีคนช่วย เช่น พยุง หรือบอกให้ทำตาม</option>
+                  <option value="3">เดินหรือเคลื่อนที่ได้เอง</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_5"></span></td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>Dressing (การสวมใส่เสื้อผ้า)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_6">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">ต้องมีคนสวมใส่ให้ ช่วยตัวเองไม่ได้หรือได้น้อย</option>
+                  <option value="1">ช่วยตัวเองได้ราวร้อยละ 50 ที่เหลือต้องมีคนช่วย</option>
+                  <option value="2">ช่วยตัวเองได้ดี (รวมทั้งการติดกระดุม รูดซิป หรือใช้เสื้อผ้าที่ดัดแปลงให้เหมาะสมได้)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_6"></span></td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td>Stairs (การขึ้นลงบันได 1 ชั้น)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_7">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">ไม่สามารถทำได้</option>
+                  <option value="1">ต้องการคนช่วย</option>
+                  <option value="2">ขึ้นลงได้เอง (ถ้าต้องใช้เครื่องช่วยเดินเช่น walker จะต้องเอาขึ้นลงได้ด้วย)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_7"></span></td>
+      </tr>
+      <tr>
+        <td>8.</td>
+        <td>Bathing (การอาบน้ำ)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_8">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">ต้องมีคนช่วย หรือทำให้</option>
+                  <option value="1">อาบน้ำเองได้</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_8"></span></td>
+      </tr>
+      <tr>
+        <td>9.</td>
+        <td>Bowels (การกลั้นการถ่ายอุจจาระในระยะ 1 สัปดาห์ที่ผ่านมา)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_9">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">กลั้นไม่ได้ หรือต้องการการสวนอุจจาระอยู่เสมอ</option>
+                  <option value="1">กลั้นได้บางครั้ง (เป็นน้อยกว่าวันละครั้ง)</option>
+                  <option value="2">กลั้นได้ปกติ</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_9"></span></td>
+      </tr>
+      <tr>
+        <td>10.</td>
+        <td>Bladder (การกลั้นการถ่ายปัสสาวะในระยะ 1 สัปดาห์ที่ผ่านมา)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_10">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">กลั้นไม่ได้ หรือใส่สายสวนปัสสาวะแต่ไม่สามารถดูแลเองได้</option>
+                  <option value="1">กลั้นได้บางครั้ง (เป็นน้อยกว่าวันละครั้ง)</option>
+                  <option value="2">กลั้นได้ปกติ</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_10"></span></td>
       </tr>
       </tbody>
     </table>

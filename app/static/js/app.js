@@ -396,6 +396,15 @@ var ViewModel = function() {
     self.lab_20_4 = ko.observable();
 
     self.adl_1 = ko.observable();
+    self.adl_2 = ko.observable();
+    self.adl_3 = ko.observable();
+    self.adl_4 = ko.observable();
+    self.adl_5 = ko.observable();
+    self.adl_6 = ko.observable();
+    self.adl_7 = ko.observable();
+    self.adl_8 = ko.observable();
+    self.adl_9 = ko.observable();
+    self.adl_10 = ko.observable();
 }
 var vm = new ViewModel();
 pager.extendWithPage(vm);

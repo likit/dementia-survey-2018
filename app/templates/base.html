@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        {% block head %}
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>
+        {% endblock %}
+    </head>
+    <body>
+        {% block page_content %}
+        {% endblock %}
+        <div class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    {% block footer %}
+                    MUMT Information Management System Powered by Flask and Python Technology
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% block scripts %}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.min.js"></script>
+            <script src="{{ url_for('static', filename='js/pager.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
+

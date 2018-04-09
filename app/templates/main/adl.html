@@ -1,0 +1,69 @@
+<div data-bind="page: {id: 'adl'}">
+  <div class="box">
+    <h1 class="title is-size-5">ความสามารถในการทำกิจวัตรประจำวันขั้นพื้นฐาน (Barthel Activity Daily Living)</h1>
+    <table class="table is-striped">
+      <thead>
+      <tr>
+        <th>ข้อ</th>
+        <th>การประเมิน</th>
+        <th>ผลการประเมิน</th>
+        <th>คะแนน</th>
+      </tr>
+      </thead>
+      <tbody>
+      <col width="5%">
+      <col width="30%">
+      <col width="30%">
+      <col width="35%">
+      <tr>
+        <td>1.</td>
+        <td>Feeding (รับประทานอาหารเมื่อเตรียมไว้ให้เรียบร้อยต่อหน้า)</td>
+        <td>
+          <div class="field">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select data-bind="value: adl_1">
+                  <option value="">โปรดเลือก</option>
+                  <option value="0">ไม่สามารถตักอาหารเข้าปากได้ ต้องมีคนป้อน</option>
+                  <option value="1">ไม่สามารถตักอาหารเข้าปากได้ ต้องมีคนป้อน</option>
+                  <option value="2">ตักอาหารเองได้ แต่ต้องมีคนช่วย เช่น ช่วยใช้ช้อนตักเตรียมไว้ให้ หรือตัดให้เป็นเล็กๆ ไว้ล่วงหน้า</option>
+                  <option value="3">ตักอาหารและช่วยตัวเองได้เป็นปกติ</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><span data-bind="text: adl_1"></span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+    <ul>
+      <li>
+        <a data-bind="page-href: '../environment'">
+          <span class="icon">
+            <i class="fa fa-arrow-circle-left"></i>
+          </span>
+          แบบประเมินสิ่งแวดล้อมฯ&nbsp;
+        </a>
+      </li>
+      <li>
+        <a>
+          บันทึก&nbsp;
+          <span class="icon">
+              <i class="fa fa-save"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a data-bind="page-href: '../healthcare'">
+          แบบประเมินความสามาถในการทำกิจวัตรประจำวัน&nbsp;
+          <span class="icon">
+              <i class="fa fa-arrow-circle-right"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div> <!-- tabs -->
+</div>

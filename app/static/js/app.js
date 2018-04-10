@@ -405,6 +405,17 @@ var ViewModel = function() {
     self.adl_8 = ko.observable();
     self.adl_9 = ko.observable();
     self.adl_10 = ko.observable();
+
+    self.tgds_1 = ko.observable();
+    self.tgds_2 = ko.observable();
+    self.tgds_3 = ko.observable();
+    self.tgds_4 = ko.observable();
+    self.tgds_5 = ko.observable();
+    self.tgds_6 = ko.observable();
+    self.tgds_7 = ko.observable();
+    self.tgds_8 = ko.observable();
+    self.tgds_9 = ko.observable();
+    self.tgds_10 = ko.observable();
 }
 var vm = new ViewModel();
 pager.extendWithPage(vm);

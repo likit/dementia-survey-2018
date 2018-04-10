@@ -12,9 +12,22 @@
         </a>
       </div>
     </div>
-    <ul data-bind="foreach: hospitals">
-      <li><span data-bind="text: $data.name"></span></li>
+    <ul data-bind="foreach: filteredHospitals">
+      <li>
+        <a href="#!" data-bind="click: vm.selectHospital.bind($data)">
+          <span data-bind="text: $data.unit_fullname + ' จังหวัด ' + $data.province_name"></span>
+        </a></li>
     </ul>
+    <div data-bind="if: selectedHospital()">
+      <table class="table">
+        <tr>
+          <td><span data-bind="text: selectedHospital().unit_fullname"></span></td>
+          <td><span data-bind="text: 'อำเภอ ' + selectedHospital().district_name"></span></td>
+          <td><span data-bind="text: 'จังหวัด ' + selectedHospital().province_name"></span></td>
+          <td><span data-bind="text: 'รหัส ' + selectedHospital().unit_id_short"></span></td>
+        </tr>
+      </table>
+    </div>
     <br><hr>
     <div class="field">
       <label class="label is-size-5">ผู้เก็บข้อมูล</label>

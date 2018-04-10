@@ -1,8 +1,8 @@
 var getHospitals = function(viewModel) {
-    var data = $.getJSON("/api/hospitals", function(data) {
-        $.each(data, function(i, d) {
-            viewModel.hospitals.push(d);
-        });
+    var data = $.getJSON("/api/v1/hospitals/", function(data) {
+      $.each(data, function(idx, d) {
+        viewModel.hospitals.push(d);
+      });
     });
 }
 
@@ -416,10 +416,51 @@ var ViewModel = function() {
     self.tgds_8 = ko.observable();
     self.tgds_9 = ko.observable();
     self.tgds_10 = ko.observable();
+
+    self.filteredHospitals = ko.observableArray();
+    self.selectedHospital = ko.observable();
+    self.hospitalId = ko.observable();
+    self.hospitalName = ko.observable();
+    self.hospitalDistrict = ko.observable();
+    self.hospitalSubDistrict = ko.observable();
+    self.hospitalProvince = ko.observable();
+    self.hospitalAreaId = ko.observable();
+    self.healthServiceAreaId = ko.observable()
+    self.hospitalNumBed = ko.observable();
+    self.hospitalRegion = ko.observable();
+    self.hospitalServicePlan = ko.observable();
+
+    self.searchHospital = function(query) {
+      if(query==='') {
+        self.filteredHospitals([]);
+      } else {
+        self.filteredHospitals([]);
+        $.each(self.hospitals(), function(idx, hos) {
+          if(hos.unit_fullname.indexOf(query) > -1 ){
+            self.filteredHospitals.push(hos);
+          }
+        });
+      }
+    };
+    self.selectHospital = function(hos) {
+      self.hospitalId(hos['unit_id_short']);
+      self.hospitalName(hos['unit_fullname']);
+      self.hospitalDistrict(hos['district_name']);
+      self.hospitalSubDistrict(hos['subdistrict_name']);
+      self.hospitalProvince(hos['province_name']);
+      self.hospitalAreaId(hos['area_id']);
+      self.healthServiceAreaId(hos['hs_area_id']);
+      self.hospitalNumBed(hos['num_bed']);
+      self.hospitalRegion(hos['region']);
+      self.hospitalServicePlan(hos['unit_service_plan']);
+      self.filteredHospitals([hos]);
+      self.selectedHospital(hos);
+    };
 }
 var vm = new ViewModel();
 pager.extendWithPage(vm);
 ko.applyBindings(vm);
+vm.hospital.subscribe(vm.searchHospital);
 
 getHospitals(vm);  // fetch a list of hospitals from the server
 

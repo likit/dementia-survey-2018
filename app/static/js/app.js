@@ -8,6 +8,7 @@ var getHospitals = function(viewModel) {
 
 var ViewModel = function() {
     var self = this;
+    self.currPageId = ko.observable();
     self.surveyId = ko.observable();
     self.hospital = ko.observable();
     self.hospitals = ko.observableArray();
@@ -508,4 +509,9 @@ vm.hospital.subscribe(vm.searchHospital);
 getHospitals(vm);  // fetch a list of hospitals from the server
 
 pager.start();
+
+var restart = function() {
+  pager.navigate('start')
+}
+
 

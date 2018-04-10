@@ -8,6 +8,7 @@ var getHospitals = function(viewModel) {
 
 var ViewModel = function() {
     var self = this;
+    self.surveyId = ko.observable();
     self.hospital = ko.observable();
     self.hospitals = ko.observableArray();
     self.surveyorName = ko.observable();
@@ -458,6 +459,48 @@ var ViewModel = function() {
     };
 }
 var vm = new ViewModel();
+
+var submitResults = function() {
+  var tmp = vm;
+  delete tmp.$__page__; // causes error if not removed
+  var data = ko.toJS(tmp);
+  delete data['filteredHospitals'];
+  delete data['selectedHospital'];
+  delete data['searchHospital'];
+  delete data['selectHospital'];
+  delete data['hospital'];
+  if (typeof vm.surveyorName === 'undefined') {
+    alert('กรุณาตรวจสอบชื่อผู้ป่วย');
+    return;
+  }
+  if (typeof vm.pntFirstName === 'undefined') {
+    alert('กรุณาตรวจสอบชื่อผู้ป่วย');
+    return;
+  }
+  if (typeof vm.pntLastName === 'undefined') {
+    alert('กรุณาตรวจสอบชื่อนามสกุลผู้ป่วย');
+    return;
+  }
+  if (typeof vm.pntPID() === 'undefined') {
+    alert('กรุณาตรวจสอบรหัสบัตรประชาชนผู้ป่วย');
+    return;
+  }
+  if (typeof vm.hospitalId() === 'undefined') {
+    alert('กรุณาเลือกสถานพยาบาล');
+    return;
+  }
+  $.ajax({
+    url: '/api/v1/results/',
+    type: 'POST',
+    data: JSON.stringify(data),
+    contentType: 'application/json',
+    dataType: 'json'
+  }).done(function(data) {
+    vm.surveyId(data.response);
+    alert('บันทึกข้อมูลแล้ว')
+  });
+}
+
 pager.extendWithPage(vm);
 ko.applyBindings(vm);
 vm.hospital.subscribe(vm.searchHospital);
@@ -465,3 +508,4 @@ vm.hospital.subscribe(vm.searchHospital);
 getHospitals(vm);  // fetch a list of hospitals from the server
 
 pager.start();
+

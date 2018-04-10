@@ -8,6 +8,11 @@ app.config['MONGO_PORT'] = 27017
 app.config['MONGO_DBNAME'] = 'hsudb'
 mongo = PyMongo(app)
 
+app.config['MONGO2_HOST'] = 'localhost'
+app.config['MONGO2_PORT'] = 27017
+app.config['MONGO2_DBNAME'] = 'survey_dementia042018'
+mongo2 = PyMongo(app, config_prefix='MONGO2')
+
 from api import api_blueprint
 app.register_blueprint(api_blueprint)
 

@@ -1,4 +1,4 @@
-<div data-bind="page: {id: 'patientinfo'}">
+<div data-bind="page: {id: 'patientinfo', afterShow: function() { currPageId('patientinfo'); }}">
   <div class="box">
     <progress class="progress is-success" value="10" max="100">10%</progress>
     <br>

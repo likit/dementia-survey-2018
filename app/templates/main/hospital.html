@@ -1,4 +1,4 @@
-<div data-bind="page: {id: 'hospital'}">
+<div data-bind="page: {id: 'hospital', afterShow: function() { currPageId('hospital'); }}">
   <div class="box">
     <h1 class="label is-size-5">สถานบริการสุขภาพ <span data-bind="text: hospital"></span> </h1>
     <div class="field has-addons">

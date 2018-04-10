@@ -1,4 +1,4 @@
-<div data-bind="page: {id: 'healthcare'}">
+<div data-bind="page: {id: 'healthcare', afterShow: function() { currPageId('healthcare'); }}">
   <div class="box">
     <h1 class="title is-size-5">4. การเข้าถึงระบบบริการสุขภาพ</h1>
     <table class="table">
@@ -1194,7 +1194,7 @@
         </a>
       </li>
       <li>
-        <a>
+        <a data-bind="click: submitResults">
           บันทึก&nbsp;
           <span class="icon">
               <i class="fa fa-save"></i>

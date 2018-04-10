@@ -22,19 +22,29 @@
                         <aside class="menu">
                             <p class="menu-label">Menu</p>
                             <ul class="menu-list">
-                                <li><a class="is-active" data-bind="page-href:'start'">หน้าแรก</a></li>
+                                <li><a data-bind="page-href:'start', css: {'is-active': currPageId() === 'start'}">
+                                    หน้าแรก</a></li>
                                 <li><a>ข้อมูลทั่วไปของสถานบริการทางสุขภาพ</a>
                                     <ul class="menu-list">
-                                        <li><a data-bind="page-href:'hospital'">ข้อมูลทั่วไปของสถานบริการสุขภาพ</a></li>
-                                        <li><a data-bind="page-href:'patientinfo'">ข้อมูลทั่วไป (ผู้ป่วยและญาติ/ผู้ดูแล)</a></li>
+                                        <li><a data-bind="page-href:'hospital', css: {'is-active': currPageId() === 'hospital'}">
+                                            ข้อมูลทั่วไปของสถานบริการสุขภาพ</a></li>
+                                        <li><a data-bind="page-href:'patientinfo', css: {'is-active': currPageId() === 'patientinfo'}">
+                                            ข้อมูลทั่วไป (ผู้ป่วยและญาติ/ผู้ดูแล)</a></li>
                                     </ul>
                                 </li>
-                                <li><a data-bind="page-href:'nursingcare'">การประเมินผลการรักษาผู้ป่วยสูงอายุสมองเสื่อมที่บ้าน</a></li>
-                                <li><a data-bind="page-href:'healthcare'">การเข้าถึงระบบบริการสุขภาพ</a></li>
-                                <li><a data-bind="page-href:'environment'">แบบประเมินสิ่งแวดล้อมฯ</a></li>
-                                <li><a data-bind="page-href:'lab'">แบบบันทึกการตรวจทางห้องปฏิบัติการ</a></li>
-                                <li><a data-bind="page-href:'adl'">แบบบันทึกการประเมิน ADL</a></li>
-                                <li><a data-bind="page-href:'tgds'">แบบบันทึกการประเมินภาวะซึมเศร้า (TGDS)</a></li>
+                                <li><a data-bind="page-href:'nursingcare', css: {'is-active': currPageId() === 'nursingcare'}">
+                                    การประเมินผลการรักษาผู้ป่วยสูงอายุสมองเสื่อมที่บ้าน</a></li>
+                                <li><a data-bind="page-href:'healthcare', css: {'is-active': currPageId() === 'healthcare'}">
+                                    การเข้าถึงระบบบริการสุขภาพ</a></li>
+                                <li><a data-bind="page-href:'environment', css: {'is-active': currPageId() === 'environment'}">
+                                    แบบประเมินสิ่งแวดล้อมฯ</a></li>
+                                <li><a data-bind="page-href:'lab', css: {'is-active': currPageId() === 'lab'}">
+                                    แบบบันทึกการตรวจทางห้องปฏิบัติการ</a></li>
+                                <li><a data-bind="page-href:'adl', css: {'is-active': currPageId() === 'adl'}">
+                                    แบบบันทึกการประเมิน ADL</a></li>
+                                <li><a data-bind="page-href:'tgds', css: {'is-active': currPageId() === 'tgds'}">
+                                    แบบบันทึกการประเมินภาวะซึมเศร้า (TGDS)</a></li>
+                                <li><a data-bind="click: restart">เพิ่มข้อมูล/เริ่มใหม่</a></li>
                             </ul>
                         </aside>
                     </div>

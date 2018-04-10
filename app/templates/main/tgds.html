@@ -1,4 +1,4 @@
-<div data-bind="page: {id: 'tgds'}">
+<div data-bind="page: {id: 'tgds', afterShow: function() { currPageId('tgds'); }}">
   <div class="box">
     <h1 class="title is-size-5">แบบประเมินภาวะซึมเศร้าสำหรับผู้สูงอายุไทย (TGDS)</h1>
     <table class="table is-striped">
@@ -239,7 +239,7 @@
         </a>
       </li>
       <li>
-        <a>
+        <a data-bind="click: submitResults">
           บันทึก&nbsp;
           <span class="icon">
               <i class="fa fa-save"></i>

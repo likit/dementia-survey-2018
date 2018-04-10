@@ -1,4 +1,4 @@
-<div data-bind="page: {id: 'nursingcare'}">
+<div data-bind="page: {id: 'nursingcare', afterShow: function() { currPageId('nursingcare'); }}">
   <div class="box">
     <h1 class="title is-size-5">การดูแลด้านการพยาบาล</h1>
     <table class="table is-striped">
@@ -497,7 +497,7 @@
         </a>
       </li>
       <li>
-        <a>
+        <a data-bind="click: submitResults">
           บันทึก&nbsp;
           <span class="icon">
               <i class="fa fa-save"></i>

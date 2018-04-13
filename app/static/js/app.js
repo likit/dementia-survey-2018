@@ -418,6 +418,21 @@ var ViewModel = function() {
     self.tgds_8 = ko.observable();
     self.tgds_9 = ko.observable();
     self.tgds_10 = ko.observable();
+    self.tgds_11 = ko.observable();
+    self.tgds_12 = ko.observable();
+    self.tgds_13 = ko.observable();
+    self.tgds_14 = ko.observable();
+    self.tgds_15 = ko.observable();
+    self.tgds_16 = ko.observable();
+    self.tgds_17 = ko.observable();
+    self.tgds_18 = ko.observable();
+    self.tgds_19 = ko.observable();
+    self.tgds_20 = ko.observable();
+    self.tgds_21 = ko.observable();
+    self.tgds_22 = ko.observable();
+    self.tgds_23 = ko.observable();
+    self.tgds_24 = ko.observable();
+    self.tgds_25 = ko.observable();
 
     self.filteredHospitals = ko.observableArray();
     self.selectedHospital = ko.observable();
@@ -455,7 +470,7 @@ var ViewModel = function() {
       self.hospitalNumBed(hos['num_bed']);
       self.hospitalRegion(hos['region']);
       self.hospitalServicePlan(hos['unit_service_plan']);
-      self.filteredHospitals([hos]);
+      self.filteredHospitals([]);
       self.selectedHospital(hos);
     };
 }

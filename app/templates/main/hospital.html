@@ -20,11 +20,17 @@
     </ul>
     <div data-bind="if: selectedHospital()">
       <table class="table">
+        <thead>
+          <th>ชื่อ</th>
+          <th>อำเภอ</th>
+          <th>จังหวัด</th>
+          <th>รหัส</th>
+        </thead>
         <tr>
           <td><span data-bind="text: selectedHospital().unit_fullname"></span></td>
-          <td><span data-bind="text: 'อำเภอ ' + selectedHospital().district_name"></span></td>
-          <td><span data-bind="text: 'จังหวัด ' + selectedHospital().province_name"></span></td>
-          <td><span data-bind="text: 'รหัส ' + selectedHospital().unit_id_short"></span></td>
+          <td><span data-bind="text: selectedHospital().district_name"></span></td>
+          <td><span data-bind="text: selectedHospital().province_name"></span></td>
+          <td><span data-bind="text: selectedHospital().unit_id_short"></span></td>
         </tr>
       </table>
     </div>

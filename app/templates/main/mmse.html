@@ -1,0 +1,842 @@
+<div data-bind="page: {id: 'mmse', afterShow: function() { currPageId('mmse'); }}">
+    <div class="box">
+        <h1 class="title is-size-5">แบบทดสอบสภาพสมองเสื่อมเบื้องต้นฉบับภาษาไทย (MMSE - Thai 2002)</h1>
+        <table class="table is-striped">
+            <thead>
+                <tr>
+                    <th>หัวข้อ</th>
+                    <th>ข้อ</th>
+                    <th>คำถาม</th>
+                    <th>คำตอบ</th>
+                    <th>ผลการประเมิน</th>
+                </tr>
+            </thead>
+            <tbody>
+                <col width="10%">
+                <col width="5%">
+                <col width="20%">
+                <col width="40%">
+                <col width="25%">
+                <tr>
+                    <td colspan="5"><strong>Orientation for time (2 points)</strong></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1.1</td>
+                    <td>วันนี้วันที่เท่าไหร่</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="number" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_1_1_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_1" name="mmse_1_1" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_1" name="mmse_1_1" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1.2</td>
+                    <td>วันนี้วันอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_1_2_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_2" name="mmse_1_2" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_2" name="mmse_1_2" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1.3</td>
+                    <td>เดือนนี้เดือนอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_1_3_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_3" name="mmse_1_3" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_3" name="mmse_1_3" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1.4</td>
+                    <td>ปีนี้ปีอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_1_4_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_4" name="mmse_1_4" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_4" name="mmse_1_4" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1.5</td>
+                    <td>ฤดูนี้ฤดูอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_1_5_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_5" name="mmse_1_5" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_1_5" name="mmse_1_5" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Orientation for place (5 points)</strong></td>
+                </tr>
+                <tr>
+                    <td><em>กรณีอยู่สถานพยาบาล</em></td>
+                    <td>2.1.1</td>
+                    <td>สถานที่ตรงนี้เรียกว่าอะไรและชื่อว่าอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_1_1_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_1" name="mmse_2_1_1" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_1" name="mmse_2_1_1" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2.1.2</td>
+                    <td>ขณะนี้ท่านอยู่ชั้นที่เท่าไหร่ของตัวอาคาร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_1_2_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_2" name="mmse_2_1_2" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_2" name="mmse_2_1_2" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2.1.3</td>
+                    <td>ที่อยู่ในอำเภอ หรือเขตอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_1_3_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_3" name="mmse_2_1_3" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_3" name="mmse_2_1_3" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2.1.4</td>
+                    <td>ที่นี่จังหวัดอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_1_4_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_4" name="mmse_2_1_4" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_4" name="mmse_2_1_4" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2.1.5</td>
+                    <td>ที่นี่ภาคอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_1_5_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_5" name="mmse_2_1_5" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_1_5" name="mmse_2_1_5" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><em>กรณีอยู่บ้านของผู้ทดสอบ</em></td>
+                    <td>2.2.1</td>
+                    <td>สถานที่ตรงนี้เรียกว่าอะไรและบ้านเลขที่เท่าไหร่</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_2_1_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_1" name="mmse_2_2_1" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_1" name="mmse_2_2_1" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2.2.2</td>
+                    <td>ที่นี่หมู่บ้าน/ละแวก/คุ้ม/ย่าน/ถนนอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_2_2_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_2" name="mmse_2_2_2" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_2" name="mmse_2_2_2" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2.2.3</td>
+                    <td>ที่นี่อำเภอหรือเขตอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_2_3_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_3" name="mmse_2_2_3" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_3" name="mmse_2_2_3" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2.2.4</td>
+                    <td>ที่นี่จังหวัดอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_2_4_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_4" name="mmse_2_2_4" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_4" name="mmse_2_2_4" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2.2.5</td>
+                    <td>ที่นี่ภาคอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" min=1 max=31 class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_2_2_5_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_5" name="mmse_2_2_5" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_2_2_5" name="mmse_2_2_5" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Registration (3 points)</strong></td>
+                </tr>
+                <tr>
+                    <td><em>กรณีทำครั้งแรก</em></td>
+                    <td>3.1</td>
+                    <td rowspan="2">ผมหรือดิฉันจะบอกชื่อของสามอย่างให้คุณตา/ยาย ตั้งใจฟังให้ดีเพราะจะบอกครั้งเดียว จะไม่บอกซ้ำอีก เมื่อผม/ดิฉันพูดจบให้คุณตา/ยายพูดทวนทั้งสามอย่างให้ครบและพยายามจำให้ดีเพราะจะถามซ้ำอีก *บอกห่างกันคำละหนึ่งวินาที ไม่ช้าหรือเร็วเกินไป</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_3_1" name="mmse_3_1" value="1">
+                                ดอกไม้
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_3_1" name="mmse_3_1" value="2">
+                                แม่น้ำ
+                                </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_3_1" name="mmse_3_1" value="3">
+                                รถไฟ
+                                </label>
+                            </div>
+                            <p class="help is-danger">เช็คข้อที่ตอบถูก</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><em>กรณีทำซ้ำในรอบสองเดือน</em></td>
+                    <td>3.2</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_3_2" name="mmse_3_2" value="1">
+                                ต้นไม้
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_3_2" name="mmse_3_2" value="2">
+                                ทะเล
+                                </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_3_2" name="mmse_3_2" value="3">
+                                รถยนต์
+                                </label>
+                            </div>
+                            <p class="help is-danger">เช็คข้อที่ตอบถูก</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Attention/Calculation (5 points)</strong></td>
+                </tr>
+                <tr>
+                    <td><em>ถ้าสามารถคิดเลขในใจได้</em></td>
+                    <td>4.1</td>
+                    <td>ข้อนี้คิดในใจเอา 100 ตั้งและลบออกทีละ 7 ไปเรื่อยๆ ได้ผลเท่าไหร่บอกมา</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" data-bind="checked: mmse_4_1" name="mmse_4_1" value="1">
+                                    ทำได้
+                                </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" data-bind="checked: mmse_4_1" name="mmse_4_1" value="0">
+                                    ทำไม่ได้
+                                </label>
+                            </div>
+                            <p class="help">คำตอบคือ 93,86,79,72,65</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><em>ถ้าไม่สามารถคิดเลขในใจได้</em></td>
+                    <td>4.2</td>
+                    <td>ผม/ดิฉัน จะสะกดคำว่ามะนาวให้คุณตา/ยายฟัง ให้คุณตา/ยายสะกดถอยหลังจากพยัญชนะตัวหลังไปตัวแรก</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" data-bind="checked: mmse_4_2" name="mmse_4_2" value="1">
+                                    ทำได้
+                                </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" data-bind="checked: mmse_4_2" name="mmse_4_2" value="0">
+                                    ทำไม่ได้
+                                </label>
+                            </div>
+                            <p class="help">คำตอบคือ ว า น ะ ม</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Recall (3 points)</strong></td>
+                </tr>
+                <tr>
+                    <td><em>กรณีทำครั้งแรก</em></td>
+                    <td>5.1</td>
+                    <td rowspan="2">เมื่อสักครู่ที่ให้จำของสามอย่างมีอะไรบ้าง</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_5_1" name="mmse_5_1" value="1">
+                                ดอกไม้
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_5_1" name="mmse_5_1" value="2">
+                                แม่น้ำ
+                                </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_5_1" name="mmse_5_1" value="3">
+                                รถไฟ
+                                </label>
+                            </div>
+                            <p class="help is-danger">เช็คข้อที่ตอบถูก</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><em>กรณีทำซ้ำในรอบสองเดือน</em></td>
+                    <td>5.2</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_5_2" name="mmse_5_2" value="1">
+                                ต้นไม้
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_5_2" name="mmse_5_2" value="2">
+                                ทะเล
+                                </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_5_2" name="mmse_5_2" value="3">
+                                รถยนต์
+                                </label>
+                            </div>
+                            <p class="help is-danger">เช็คข้อที่ตอบถูก</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Naming (2 points)</strong></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>6.1</td>
+                    <td>ยื่นดินสอให้แล้วถามว่า ของสิ่งนี้เรียกว่าอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_6_1_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_6_1" name="mmse_6_1" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_6_1" name="mmse_6_1" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>6.2</td>
+                    <td>ยื่นนาฬิกาข้อมือให้แล้วถามว่า ของสิ่งนี้เรียกว่าอะไร</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" class="input" placeholder="คำตอบ"
+                                    data-bind="value: mmse_6_2_ans">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_6_2" name="mmse_6_2" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_6_2" name="mmse_6_2" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Repetition (1 point)</strong></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>7.1</td>
+                    <td>ตั้งใจฟังผม/ดิฉันพูดข้อความต่อไปนี้แล้วให้คุณตา/ยายพูดตาม จะบอกครั้งเดียว "ใครใคร่ขายไข่ไก่"</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_7_1" name="mmse_7_1" value="1">
+                                ถูกต้อง
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_7_1" name="mmse_7_1" value="0">
+                                ไม่ถูกต้อง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Verbal Command (3 points)</strong></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>8.1</td>
+                    <td>ฟังดีๆ นะเดี๋ยวผม/ดิฉันจะส่งกระดาษให้คุณตา/ยาย รับด้วยมือขวา พับครึ่งกระดาษ แล้ววางไว้ที่ (พื้น/โต๊ะ/เตียง) ผู้ทดสอบส่งกระดาษเปล่าขนาด A4 ไม่มีรอยพับให้ผู้ถูกทดสอบ</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_8_1" name="mmse_8_1" value="1">
+                                รับด้วยมือขวา
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_8_1" name="mmse_8_1" value="2">
+                                พับครึ่งกระดาษ
+                                </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: mmse_8_1" name="mmse_8_1" value="3">
+                                วางไว้ที่ โต๊ะ/พื้น/เตียง
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Written Command (1 point)</strong></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>9.1</td>
+                    <td>ต่อไปเป็นคำสั่งที่เขียนเป็นตัวหนังสือ ต้องการให้คุณตา/ยาย อ่านแล้วทำตาม จะอ่านออกเสียงหรืออ่านในใจก็ได้ ผู้ทดสอบแสดงกระดาษที่เขียนว่า "หลับตา"</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_9_1" name="mmse_9_1" value="1">
+                                หลับตาได้
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_9_1" name="mmse_9_1" value="0">
+                                หลับตาไม่ได้
+                                </label>
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Writing (1 point)</strong></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>10.1</td>
+                    <td>ข้อนี้จะเป็นคำสั่ง "ให้คุณตา/ยาย เขียนข้อความอะไรก็ได้ที่อ่านรู้เรื่องหรือมีความหมายมาหนึ่งประโยค"</td>
+                    <td colspan="2">
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_10_1" name="mmse_10_1" value="1">
+                                ประโยคมีความหมาย
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_10_1" name="mmse_10_1" value="0">
+                                ประโยคไม่มีความหมาย
+                                </label>
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><strong>Visioconstruction (1 point)</strong></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>11.1</td>
+                    <td>ข้อต่อไปนี้เป็นคำสั่ง "จงวาดภาพให้เหมือนภาพตัวอย่าง"</td>
+                    <td>
+                        <img src="{{ url_for('static', filename='images/visio.png') }}">
+                    </td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_11_1" name="mmse_11_1" value="1">
+                                วาดได้
+                            </label>
+                            </div>
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" data-bind="checked: mmse_11_1" name="mmse_11_1" value="0">
+                                วาดไม่ได้
+                                </label>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+        <ul>
+        <li>
+            <a data-bind="page-href: '../2q'">
+            <span class="icon">
+                <i class="fa fa-arrow-circle-left"></i>
+            </span>
+            &nbsp;แบบคัดกรองภาวะซึมเศร้าด้วยสองคำถาม
+            </a>
+        </li>
+        <li>
+            <a data-bind="click: submitResults">
+            บันทึก&nbsp;
+            <span class="icon">
+                <i class="fa fa-save"></i>
+            </span>
+            </a>
+        </li>
+        <li>
+            <a data-bind="page-href: '../mmse'">
+            <span class="icon">
+                <i class="fa fa-arrow-circle-right"></i>
+            </span>
+            แบบคัดกรองภาวะซึมเศร้าสองคำถาม (2Q)&nbsp;
+            </a>
+        </li>
+        </ul>
+    </div> <!-- tabs -->
+</div>

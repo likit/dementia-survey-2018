@@ -47,6 +47,8 @@
                                     แบบบันทึกการประเมินภาวะซึมเศร้า (TGDS)</a></li>
                                 <li><a data-bind="page-href:'2q', css: {'is-active': currPageId() === '2q'}">
                                     แบบบันทึกคัดกรองภาวะซึมเศร้าด้วยสองคำถาม (2Q)</a></li>
+                                <li><a data-bind="page-href:'mmse', css: {'is-active': currPageId() === 'mmse'}">
+                                    แบบทดสอบสภาพสมองเสื่อมเบื้องต้นฉบับภาษาไทย (MMSE)</a></li>
                                 <li><a data-bind="click: restart">เพิ่มข้อมูล/เริ่มใหม่</a></li>
                             </ul>
                         </aside>
@@ -62,6 +64,7 @@
                       {% include "main/adl.html" %}
                       {% include "main/tgds.html" %}
                       {% include "main/twoq.html" %}
+                      {% include "main/mmse.html" %}
                     </div> <!-- column -->
                 </div>
             </section>

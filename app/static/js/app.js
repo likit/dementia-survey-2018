@@ -441,6 +441,61 @@ var ViewModel = function() {
     self.twoq_1 = ko.observable();
     self.twoq_2 = ko.observable();
 
+    self.mmse_1_1 = ko.observable();
+    self.mmse_1_2 = ko.observable();
+    self.mmse_1_3 = ko.observable();
+    self.mmse_1_4 = ko.observable();
+    self.mmse_1_5 = ko.observable();
+    self.mmse_1_1_ans = ko.observable();
+    self.mmse_1_2_ans = ko.observable();
+    self.mmse_1_3_ans = ko.observable();
+    self.mmse_1_4_ans = ko.observable();
+    self.mmse_1_5_ans = ko.observable();
+
+    self.mmse_2_1_1 = ko.observable();
+    self.mmse_2_1_2 = ko.observable();
+    self.mmse_2_1_3 = ko.observable();
+    self.mmse_2_1_4 = ko.observable();
+    self.mmse_2_1_5 = ko.observable();
+    self.mmse_2_1_1_ans = ko.observable();
+    self.mmse_2_1_2_ans = ko.observable();
+    self.mmse_2_1_3_ans = ko.observable();
+    self.mmse_2_1_4_ans = ko.observable();
+    self.mmse_2_1_5_ans = ko.observable();
+
+    self.mmse_2_2_1 = ko.observable();
+    self.mmse_2_2_2 = ko.observable();
+    self.mmse_2_2_3 = ko.observable();
+    self.mmse_2_2_4 = ko.observable();
+    self.mmse_2_2_5 = ko.observable();
+    self.mmse_2_2_1_ans = ko.observable();
+    self.mmse_2_2_2_ans = ko.observable();
+    self.mmse_2_2_3_ans = ko.observable();
+    self.mmse_2_2_4_ans = ko.observable();
+    self.mmse_2_2_5_ans = ko.observable();
+
+    self.mmse_3_1 = ko.observableArray([]);
+    self.mmse_3_2 = ko.observableArray([]);
+
+    self.mmse_4_1 = ko.observable();
+    self.mmse_4_2 = ko.observable();
+
+    self.mmse_5_1 = ko.observableArray([]);
+    self.mmse_5_2 = ko.observableArray([]);
+
+    self.mmse_6_1 = ko.observable();
+    self.mmse_6_2 = ko.observable();
+    self.mmse_6_1_ans = ko.observable();
+    self.mmse_6_2_ans = ko.observable();
+
+    self.mmse_7_1 = ko.observable();
+
+    self.mmse_8_1 = ko.observableArray([]);
+
+    self.mmse_9_1 = ko.observable();
+    self.mmse_10_1 = ko.observable();
+    self.mmse_11_1 = ko.observable();
+
     self.filteredHospitals = ko.observableArray();
     self.selectedHospital = ko.observable();
     self.hospitalId = ko.observable();

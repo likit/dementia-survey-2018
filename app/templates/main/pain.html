@@ -1,0 +1,133 @@
+<div data-bind="page: {id: 'pain', afterShow: function() { currPageId('pain'); }}">
+    <div class="box">
+        <h1 class="title is-size-5">การประเมินระดับความปวด</h1><p>คลิกที่รูปเพื่อเลือก</p>
+        <table class="table is-narrow">
+            <tbody>
+                <tr>
+                    <td><img src="{{ url_for('static', filename='images/painScale1.png') }}"
+                        data-bind="click: function(data, event) { selectPainScale('1'); }"></td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="radio">
+                                    <label class="radio title">
+                                        <input type="radio" class="radio" name="pain" value="1" data-bind="checked: painScale">
+                                        ระดับ 1
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{{ url_for('static', filename='images/painScale2.png') }}"
+                        data-bind="click: function(data, event) { selectPainScale('2'); }"></td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="radio">
+                                    <label class="radio title">
+                                        <input type="radio" class="radio" name="pain" value="2" data-bind="checked: painScale">
+                                        ระดับ 2
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{{ url_for('static', filename='images/painScale3.png') }}"
+                        data-bind="click: function(data, event) { selectPainScale('3'); }"></td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="radio">
+                                    <label class="radio title">
+                                        <input type="radio" class="radio" name="pain" value="3" data-bind="checked: painScale">
+                                        ระดับ 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{{ url_for('static', filename='images/painScale4.png') }}"
+                        data-bind="click: function(data, event) { selectPainScale('4'); }"></td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="radio">
+                                    <label class="radio title">
+                                        <input type="radio" class="radio" name="pain" value="4" data-bind="checked: painScale">
+                                        ระดับ 4
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{{ url_for('static', filename='images/painScale5.png') }}"
+                        data-bind="click: function(data, event) { selectPainScale('5'); }"></td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="radio">
+                                    <label class="radio title">
+                                        <input type="radio" class="radio" name="pain" value="5" data-bind="checked: painScale">
+                                        ระดับ 5
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{{ url_for('static', filename='images/painScale6.png') }}"
+                        data-bind="click: function(data, event) { selectPainScale('6'); }"></td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="radio">
+                                    <label class="radio title">
+                                        <input type="radio" class="radio" name="pain" value="6" data-bind="checked: painScale">
+                                        ระดับ 6
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+        <ul>
+        <li>
+            <a data-bind="page-href: '../mmse'">
+            <span class="icon">
+                <i class="fa fa-arrow-circle-left"></i>
+            </span>
+            &nbsp;แบบทดสอบสภาวะสมองเสื่อมฉบับภาษาไทย (MMSE)
+            </a>
+        </li>
+        <li>
+            <a data-bind="click: submitResults">
+            บันทึก&nbsp;
+            <span class="icon">
+                <i class="fa fa-save"></i>
+            </span>
+            </a>
+        </li>
+        <li>
+            <a data-bind="page-href: '../mna'">
+            <span class="icon">
+                <i class="fa fa-arrow-circle-right"></i>
+            </span>
+            แบบประเมินภาวะโภชนาการ (MNA)&nbsp;
+            </a>
+        </li>
+        </ul>
+    </div> <!-- tabs -->
+</div>

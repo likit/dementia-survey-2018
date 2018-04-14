@@ -496,6 +496,12 @@ var ViewModel = function() {
     self.mmse_10_1 = ko.observable();
     self.mmse_11_1 = ko.observable();
 
+    self.painScale = ko.observable();
+
+    self.selectPainScale = function(value) {
+      self.painScale(value);
+    }
+
     self.filteredHospitals = ko.observableArray();
     self.selectedHospital = ko.observable();
     self.hospitalId = ko.observable();

@@ -438,6 +438,8 @@ var ViewModel = function() {
     self.tgds_28 = ko.observable();
     self.tgds_29 = ko.observable();
     self.tgds_30 = ko.observable();
+    self.twoq_1 = ko.observable();
+    self.twoq_2 = ko.observable();
 
     self.filteredHospitals = ko.observableArray();
     self.selectedHospital = ko.observable();

@@ -1,0 +1,84 @@
+<div data-bind="page: {id: '2q', afterShow: function() { currPageId('2q'); }}">
+    <div class="box">
+        <h1 class="title is-size-5">การคัดกรองโรคซึมเศร้าด้วยสองคำถาม (2Q)</h1>
+        <table class="table is-striped">
+            <thead>
+                <tr>
+                    <th>ข้อ</th>
+                    <th>คำถาม</th>
+                    <th>ผลการประเมิน</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td>ในสองสัปดาห์ที่ผ่านรวมถึงวันนี้ ท่านรู้สึก หดหู่ เศร้า หรือท้อแท้สิ้นหวังหรือไม่</td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: twoq_1" name="twoq_1" value="1">
+                                ใช่
+                            </label>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <label class="radio">
+                            <input type="radio" data-bind="checked: twoq_1" name="twoq_1" value="0">
+                            ไม่ใช่
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>ในสองสัปดาห์ที่ผ่านรวมถึงวันนี้ ท่านรู้สึก เบื่อ ทำอะไรก็ไม่เพลิดเพลินหรือไม่</td>
+                    <td>
+                        <div class="field is-grouped">
+                            <div class="control">
+                            <label class="radio">
+                                <input type="radio" data-bind="checked: twoq_2" name="twoq_2" value="1">
+                                ใช่
+                            </label>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <label class="radio">
+                            <input type="radio" data-bind="checked: twoq_2" name="twoq_2" value="0">
+                            ไม่ใช่
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+        <ul>
+            <li>
+            <a data-bind="page-href: '../adl'">
+                <span class="icon">
+                    <i class="fa fa-arrow-circle-left"></i>
+                </span>
+                &nbsp;แบบประเมินความสามาถในการทำกิจวัตรประจำวัน
+            </a>
+            </li>
+            <li>
+            <a data-bind="click: submitResults">
+                บันทึก&nbsp;
+                <span class="icon">
+                    <i class="fa fa-save"></i>
+                </span>
+            </a>
+            </li>
+            <li>
+            <a data-bind="page-href: '../2q'">
+                <span class="icon">
+                <i class="fa fa-arrow-circle-right"></i>
+                </span>
+                แบบคัดกรองภาวะซึมเศร้าสองคำถาม (2Q)&nbsp;
+            </a>
+            </li>
+        </ul>
+    </div> <!-- tabs -->
+</div>

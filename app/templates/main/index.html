@@ -53,11 +53,22 @@
                                     การประเมินระดับความปวด</a></li>
                                 <li><a data-bind="page-href:'mna', css: {'is-active': currPageId() === 'mna'}">
                                     แบบประเมินภาวะโภชนาการ</a></li>
-                                <li><a data-bind="click: restart">
-                                    <span class="icon">
-                                        <i class="fa fa-plus"></i>
-                                    </span>
-                                    เพิ่มข้อมูล/เริ่มใหม่</a></li>
+                                <li><a>เมนู</a>
+                                    <ul class="menu-list">
+                                        <li><a href="/">
+                                            <span class="icon">
+                                                <i class="fa fa-plus"></i>
+                                            </span>
+                                            เพิ่มข้อมูล/เริ่มใหม่</a>
+                                        </li>
+                                        <li><a data-bind="click: restart">
+                                            <span class="icon">
+                                                <i class="fa fa-edit"></i>
+                                            </span>
+                                            แก้ไข/เพิ่มเติมข้อมูล</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </aside>
                     </div>

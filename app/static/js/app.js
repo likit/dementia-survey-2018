@@ -622,9 +622,3 @@ vm.hospital.subscribe(vm.searchHospital);
 getHospitals(vm);  // fetch a list of hospitals from the server
 
 pager.start();
-
-var restart = function() {
-  pager.navigate('start')
-}
-
-

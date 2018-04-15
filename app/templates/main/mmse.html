@@ -1,4 +1,32 @@
 <div data-bind="page: {id: 'mmse', afterShow: function() { currPageId('mmse'); }}">
+    <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+        <ul>
+        <li>
+            <a data-bind="page-href: '../2q'">
+            <span class="icon">
+                <i class="fa fa-arrow-circle-left"></i>
+            </span>
+            &nbsp;แบบคัดกรองภาวะซึมเศร้าด้วยสองคำถาม
+            </a>
+        </li>
+        <li>
+            <a data-bind="click: submitResults">
+            บันทึก&nbsp;
+            <span class="icon">
+                <i class="fa fa-save"></i>
+            </span>
+            </a>
+        </li>
+        <li>
+            <a data-bind="page-href: '../pain'">
+            <span class="icon">
+                <i class="fa fa-arrow-circle-right"></i>
+            </span>
+            การประเมินระดับความปวด&nbsp;
+            </a>
+        </li>
+        </ul>
+    </div> <!-- tabs -->
     <div class="box">
         <h1 class="title is-size-5">แบบทดสอบสภาพสมองเสื่อมเบื้องต้นฉบับภาษาไทย (MMSE - Thai 2002)</h1>
         <table class="table is-striped">

@@ -23,8 +23,33 @@
                         <aside class="menu">
                             <p class="menu-label">Menu</p>
                             <ul class="menu-list">
+                                <li><a><strong>โปรแกรมเมนู</strong></a>
+                                    <ul class="menu-list">
+                                        <li><a href="/">
+                                            <span class="icon">
+                                                <i class="fa fa-plus"></i>
+                                            </span>
+                                            เพิ่มข้อมูล/เริ่มใหม่</a>
+                                        </li>
+                                        <li><a data-bind="click: submitResults">
+                                            <span class="icon">
+                                                <i class="fa fa-save"></i>
+                                            </span>
+                                            บันทึกข้อมูล</a>
+                                        </li>
+                                        <li><a data-bind="page-href: 'records'">
+                                            <span class="icon">
+                                                <i class="fa fa-edit"></i>
+                                            </span>
+                                            แก้ไข/เพิ่มเติมข้อมูล</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li><a data-bind="page-href:'start', css: {'is-active': currPageId() === 'start'}">
-                                    หน้าแรก</a></li>
+                                    <span class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </span>
+                                    <strong>หน้าแรกแบบประเมิน</strong></a></li>
                                 <li><a>ข้อมูลทั่วไปของสถานบริการทางสุขภาพ</a>
                                     <ul class="menu-list">
                                         <li><a data-bind="page-href:'hospital', css: {'is-active': currPageId() === 'hospital'}">
@@ -53,22 +78,6 @@
                                     การประเมินระดับความปวด</a></li>
                                 <li><a data-bind="page-href:'mna', css: {'is-active': currPageId() === 'mna'}">
                                     แบบประเมินภาวะโภชนาการ</a></li>
-                                <li><a>เมนู</a>
-                                    <ul class="menu-list">
-                                        <li><a href="/">
-                                            <span class="icon">
-                                                <i class="fa fa-plus"></i>
-                                            </span>
-                                            เพิ่มข้อมูล/เริ่มใหม่</a>
-                                        </li>
-                                        <li><a data-bind="page-href: 'records'">
-                                            <span class="icon">
-                                                <i class="fa fa-edit"></i>
-                                            </span>
-                                            แก้ไข/เพิ่มเติมข้อมูล</a>
-                                        </li>
-                                    </ul>
-                                </li>
                             </ul>
                         </aside>
                     </div>

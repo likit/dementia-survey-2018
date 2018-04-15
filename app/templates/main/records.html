@@ -1,0 +1,39 @@
+<div data-bind="page: {id: 'records', afterShow: function() { currPageId('records'); }}">
+    <div class="box">
+        <h1 class="title is-size-5">รายการข้อมูล</h1>
+        <table id="records">
+            <thead>
+                <tr>
+                    <th>ลำดับ</th>
+                    <th>ชื่อ</th>
+                    <th>นามสกุล</th>
+                    <th>จังหวัด</th>
+                    <th>แก้ไขเมื่อ</th>
+                    <th>แก้ไข</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rec in records %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ rec.pntFirstName }}</td>
+                    <td>{{ rec.pntLastName }}</td>
+                    <td>{{ rec.province }}</td>
+                    <td>{{ rec.updatedAt }}</td>
+                    <td>
+                        <a class="icon" href="{{ url_for('main', objId=rec.surveyId) }}">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="button is-inverted is-info" data-bind="click: function() { location.reload(); }">
+            <span class="icon">
+                <i class="fa fa-download"></i>
+            </span>&nbsp;
+            คลิกเพื่อโหลดข้อมูลใหม่จากฐานข้อมูล
+        </a>
+    </div>
+</div>

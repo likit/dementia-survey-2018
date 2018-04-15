@@ -1,5 +1,20 @@
 <div data-bind="page: {id: 'start', afterShow: function() { currPageId('start'); }}">
-  <article class="message is-info">
+  <article class="message is-info" data-bind="visible: typeof surveyId() !== 'undefined'">
+    <div class="message-body">
+      <span class="icon is-large">
+        <i class="fa fa-folder-open fa-2x"></i>
+      </span>&nbsp;
+      <strong class="is-size-4">รายงานผลการติดตามการรักษาของผู้ป่วย</strong>
+      <p>
+        <span data-bind="text: 'ชื่อ ' + pntFirstName() + ' ' + pntLastName()"></span>
+        <span data-bind="text: 'อายุ ' + pntAge() + ' ปี'"></span><br>
+        <span data-bind="text: hospitalName()"></span>
+        <span data-bind="text: 'จังหวัด ' + hospitalProvince()"></span><br>
+        <span data-bind="text: 'รวบรวมโดย ' + surveyorName()"></span>
+      </p>
+    </div>
+  </article>
+  <article class="message is-info" data-bind="visible: typeof surveyId() === 'undefined'">
     <div class="message-body">
       <strong>ยินดีต้อนรับสู่ระบบบันทึกข้อมูลวิจัยออนไลน์ ระบบประกอบไปด้วย</strong>
       <div class="content">

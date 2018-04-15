@@ -517,12 +517,12 @@ var ViewModel = function() {
     self.mna_6 = ko.computed(function() {
       if(self.bmi() < 19) {
         return "0";
-      } else if (self.bmi >= 19 && self.bmi < 21) {
+      } else if (self.bmi() >= 19 && self.bmi() < 21) {
         return "1";
-      } else if (self.bmi >= 21 && self.bmi < 23) {
-        return "1";
-      } else if (self.bmi >= 23) {
+      } else if (self.bmi() >= 21 && self.bmi() < 23) {
         return "2";
+      } else if (self.bmi() >= 23) {
+        return "3";
       } else {
         return "";
       }

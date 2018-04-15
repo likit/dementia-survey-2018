@@ -1,7 +1,16 @@
 <div data-bind="page: {id: 'hospital', afterShow: function() { currPageId('hospital'); }}">
   <div class="box">
-    <h1 class="label is-size-5">สถานบริการสุขภาพ <span data-bind="text: hospital"></span> </h1>
-    <div class="field has-addons">
+    <h1 class="label is-size-5">สถานบริการสุขภาพ <span data-bind="text: hospital"></span></h1>
+    <div class="box" data-bind="visible: typeof hospitalName() !== 'undefined'">
+      <strong>
+        <span  data-bind="text: hospitalName()"></span>
+        <span  data-bind="text: 'ตำบล' + hospitalSubDistrict()"></span>
+        <span  data-bind="text: 'อำเภอ ' + hospitalDistrict()"></span>
+        <span  data-bind="text: 'จังหวัด ' + hospitalProvince()"></span>
+        <span  data-bind="text: 'รหัส ' + hospitalId()"></span><br>
+      </strong>
+    </div>
+    <div class="field has-addons" data-bind="visible: typeof hospitalName() === 'undefined'">
       <div class="control">
         <input class="input" data-bind="textInput: hospital"
                type="text" placeholder="ค้นหาชื่อสถานพยาบาล">
@@ -19,23 +28,6 @@
           <span data-bind="text: $data.unit_fullname + ' จังหวัด ' + $data.province_name"></span>
         </a></li>
     </ul>
-    <div data-bind="if: selectedHospital()">
-      <table class="table">
-        <thead>
-          <th>ชื่อ</th>
-          <th>อำเภอ</th>
-          <th>จังหวัด</th>
-          <th>รหัส</th>
-        </thead>
-        <tr>
-          <td><span data-bind="text: selectedHospital().unit_fullname"></span></td>
-          <td><span data-bind="text: selectedHospital().district_name"></span></td>
-          <td><span data-bind="text: selectedHospital().province_name"></span></td>
-          <td><span data-bind="text: selectedHospital().unit_id_short"></span></td>
-        </tr>
-      </table>
-    </div>
-    <br><hr>
     <div class="field">
       <label class="label is-size-5">ผู้เก็บข้อมูล</label>
       <div class="control has-icons-left">
@@ -82,6 +74,14 @@
           หน้าแรก&nbsp;
           <span class="icon">
             <i class="fa fa-arrow-circle-left"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a data-bind="click: submitResults">
+          บันทึก&nbsp;
+          <span class="icon">
+              <i class="fa fa-save"></i>
           </span>
         </a>
       </li>

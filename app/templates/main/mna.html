@@ -150,11 +150,11 @@
                         <div class="field is-grouped">
                             <div class="control">
                                 <input type="number" step="0.1" placeholder="น้ำหนัก (ก.ก.)"
-                                    class="input" data-bind="value: mna_weight">
+                                    class="input" data-bind="textInput: mna_weight">
                             </div>
                             <div class="control">
                                 <input type="number" step="0.1" placeholder="ส่วนสูง (ซ.ม.)"
-                                    class="input" data-bind="value: mna_height">
+                                    class="input" data-bind="textInput: mna_height">
                             </div>
                         </div>
                     </td>
@@ -175,7 +175,7 @@
             &nbsp;แบบทดสอบสภาวะสมองเสื่อมฉบับภาษาไทย (MMSE)
             </a>
         </li>
-        <li>
+        <li class="is-active">
             <a data-bind="click: submitResults">
             บันทึก&nbsp;
             <span class="icon">

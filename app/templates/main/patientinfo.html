@@ -1,4 +1,32 @@
 <div data-bind="page: {id: 'patientinfo', afterShow: function() { currPageId('patientinfo'); }}">
+  <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+    <ul>
+      <li>
+        <a data-bind="page-href: '../hospital'">
+          ข้อมูลทั่วไปสถานบริการ&nbsp;
+          <span class="icon">
+              <i class="fa fa-arrow-circle-left"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a data-bind="click: submitResults">
+          บันทึก&nbsp;
+          <span class="icon">
+              <i class="fa fa-save"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a data-bind="page-href: '../nursingcare'">
+          การดูแลด้านการพยาบาล&nbsp;
+          <span class="icon">
+              <i class="fa fa-arrow-circle-right"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div> <!-- tabs -->
   <div class="box">
     <progress class="progress is-success" value="10" max="100">10%</progress>
     <br>
@@ -75,7 +103,7 @@
         </div>
       </div>
     </div>
-    <table class="table is-striped">
+    <table class="table is-narrow">
       <thead>
       <tr>
         <th>ข้อ</th>

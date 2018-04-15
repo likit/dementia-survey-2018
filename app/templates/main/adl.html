@@ -1,4 +1,32 @@
 <div data-bind="page: {id: 'adl', afterShow: function() { currPageId('adl'); }}">
+  <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+    <ul>
+      <li>
+        <a data-bind="page-href: '../environment'">
+          <span class="icon">
+            <i class="fa fa-arrow-circle-left"></i>
+          </span>
+          แบบประเมินสิ่งแวดล้อมฯ&nbsp;
+        </a>
+      </li>
+      <li>
+        <a data-bind="click: submitResults">
+          บันทึก&nbsp;
+          <span class="icon">
+              <i class="fa fa-save"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a data-bind="page-href: '../tgds'">
+          แบบประเมินภาวะซึมเศร้า (TGDS)&nbsp;
+          <span class="icon">
+              <i class="fa fa-arrow-circle-right"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div> <!-- tabs -->
   <div class="box">
     <h1 class="title is-size-5">ความสามารถในการทำกิจวัตรประจำวันขั้นพื้นฐาน (Barthel Activity Daily Living)</h1>
     <table class="table is-striped">

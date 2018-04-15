@@ -599,6 +599,10 @@ var submitResults = function() {
     alert('กรุณาเลือกสถานพยาบาล');
     return;
   }
+  if (typeof vm.surveyDate() === 'undefined') {
+    alert('กรุณาเลือกระบุวันที่ทำแบบทดสอบ');
+    return;
+  }
   $.ajax({
     url: '/api/v1/results/',
     type: 'POST',

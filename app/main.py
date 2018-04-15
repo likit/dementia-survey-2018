@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
+from bson.objectid import ObjectId
 from flask_pymongo import PyMongo
 
 app = Flask(__name__)
@@ -18,7 +19,27 @@ app.register_blueprint(api_blueprint)
 
 @app.route('/')
 def main():
-    return render_template('main/index.html')
+    records = []
+    for rec in mongo2.db.results.find():
+        try:
+            r = {
+                'pntFirstName': rec['pntFirstName'],
+                'pntLastName': rec['pntLastName'],
+                'province': rec['hospitalProvince'],
+                'surveyId': str(rec['_id']),
+                'updatedAt': rec['updatedAt']
+                }
+        except KeyError:
+            continue
+        records.append(r)
+    obj_id = request.args.get('objId', None)
+    if not obj_id:  # new record
+        return render_template('main/index.html', data={}, records=records)
+    else:
+        rec = mongo2.db.results.find_one({'_id': ObjectId(obj_id)})
+        rec['surveyId'] = str(rec['_id'])
+        rec['_id'] = str(rec['_id'])
+        return render_template('main/index.html', data=rec, records=records)
 
 
 if __name__ == '__main__':

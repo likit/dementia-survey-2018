@@ -578,6 +578,7 @@ var submitResults = function() {
   delete data['selectedHospital'];
   delete data['searchHospital'];
   delete data['selectHospital'];
+  delete data['hospitals'];
   delete data['hospital'];
   if (typeof vm.surveyorName === 'undefined') {
     alert('กรุณาตรวจสอบชื่อผู้ป่วย');
@@ -615,8 +616,18 @@ var submitResults = function() {
   });
 }
 
+if (!$.isEmptyObject(data)) {
+  delete data['bmi']; // delete computed value
+  delete data['mna_6']; // delete computed value
+  for(var key in data) {
+    if(data.hasOwnProperty(key) && vm.hasOwnProperty(key)) {
+      vm[key](data[key]);
+    }
+  }
+}
 pager.extendWithPage(vm);
 ko.applyBindings(vm);
+
 vm.hospital.subscribe(vm.searchHospital);
 
 getHospitals(vm);  // fetch a list of hospitals from the server

@@ -31,9 +31,8 @@ def save_result():
         return jsonify({'response': str(inserted_id)})
     else:
         record = mongo2.db.results.find_one({'_id': ObjectId(data['surveyId'])})
-        for k in record.keys():
-            if k in data:
-                record[k] = data[k]
+        for k in data.keys():
+            record[k] = data[k]
         record['updatedAt'] = datetime.now()
         mongo2.db.results.save(record)
         return jsonify({'response': data['surveyId']})

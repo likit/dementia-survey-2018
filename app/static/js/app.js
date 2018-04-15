@@ -502,6 +502,32 @@ var ViewModel = function() {
       self.painScale(value);
     }
 
+    self.mna_weight = ko.observable();
+    self.mna_height = ko.observable();
+
+    self.bmi = ko.computed(function() {
+      return self.mna_weight() / Math.pow((self.mna_height()/100.0),2)
+    });
+
+    self.mna_1 = ko.observable();
+    self.mna_2 = ko.observable();
+    self.mna_3 = ko.observable();
+    self.mna_4 = ko.observable();
+    self.mna_5 = ko.observable();
+    self.mna_6 = ko.computed(function() {
+      if(self.bmi() < 19) {
+        return "0";
+      } else if (self.bmi >= 19 && self.bmi < 21) {
+        return "1";
+      } else if (self.bmi >= 21 && self.bmi < 23) {
+        return "1";
+      } else if (self.bmi >= 23) {
+        return "2";
+      } else {
+        return "";
+      }
+    });
+
     self.filteredHospitals = ko.observableArray();
     self.selectedHospital = ko.observable();
     self.hospitalId = ko.observable();

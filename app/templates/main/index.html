@@ -51,7 +51,13 @@
                                     แบบทดสอบสภาพสมองเสื่อมเบื้องต้นฉบับภาษาไทย (MMSE)</a></li>
                                 <li><a data-bind="page-href:'pain', css: {'is-active': currPageId() === 'pain'}">
                                     การประเมินระดับความปวด</a></li>
-                                <li><a data-bind="click: restart">เพิ่มข้อมูล/เริ่มใหม่</a></li>
+                                <li><a data-bind="page-href:'mna', css: {'is-active': currPageId() === 'mna'}">
+                                    แบบประเมินภาวะโภชนาการ</a></li>
+                                <li><a data-bind="click: restart">
+                                    <span class="icon">
+                                        <i class="fa fa-plus"></i>
+                                    </span>
+                                    เพิ่มข้อมูล/เริ่มใหม่</a></li>
                             </ul>
                         </aside>
                     </div>
@@ -68,6 +74,7 @@
                       {% include "main/twoq.html" %}
                       {% include "main/mmse.html" %}
                       {% include "main/pain.html" %}
+                      {% include "main/mna.html" %}
                     </div> <!-- column -->
                 </div>
             </section>

@@ -16,6 +16,32 @@
                         </h2>
                     </div>
                 </div>
+                <div class="hero-foot">
+                    <nav class="tabs is-centered">
+                        <div class="container">
+                            <ul>
+                                <li><a href="/">
+                                    <span class="icon">
+                                        <i class="fa fa-plus"></i>
+                                    </span>
+                                    เพิ่มข้อมูล/เริ่มใหม่</a>
+                                </li>
+                                <li><a data-bind="click: submitResults">
+                                    <span class="icon">
+                                        <i class="fa fa-save"></i>
+                                    </span>
+                                    บันทึกข้อมูล</a>
+                                </li>
+                                <li><a data-bind="page-href: 'records'">
+                                    <span class="icon">
+                                        <i class="fa fa-edit"></i>
+                                    </span>
+                                    แก้ไข/เพิ่มเติมข้อมูล</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </section>
             <section class="section">
                 <div class="columns">
@@ -23,28 +49,6 @@
                         <aside class="menu">
                             <p class="menu-label">Menu</p>
                             <ul class="menu-list">
-                                <li><a><strong>โปรแกรมเมนู</strong></a>
-                                    <ul class="menu-list">
-                                        <li><a href="/">
-                                            <span class="icon">
-                                                <i class="fa fa-plus"></i>
-                                            </span>
-                                            เพิ่มข้อมูล/เริ่มใหม่</a>
-                                        </li>
-                                        <li><a data-bind="click: submitResults">
-                                            <span class="icon">
-                                                <i class="fa fa-save"></i>
-                                            </span>
-                                            บันทึกข้อมูล</a>
-                                        </li>
-                                        <li><a data-bind="page-href: 'records'">
-                                            <span class="icon">
-                                                <i class="fa fa-edit"></i>
-                                            </span>
-                                            แก้ไข/เพิ่มเติมข้อมูล</a>
-                                        </li>
-                                    </ul>
-                                </li>
                                 <li><a data-bind="page-href:'start', css: {'is-active': currPageId() === 'start'}">
                                     <span class="icon">
                                         <i class="fa fa-home"></i>
@@ -99,6 +103,20 @@
                     </div> <!-- column -->
                 </div>
             </section>
+            <footer class="footer">
+                <div class="container">
+                    <div class="content has-text-centered">
+                        <p>
+                            <strong>ระบบบันทึกข้อมูลออนไลน์เพื่อการศึกษาติดตามประเมินผลการรักษาผู้ป่วยสูงอายุภาวะสมองเสื่อมในสถานบริการและที่บ้าน</strong><br>พัฒนาโดยความร่วมมือระหว่างสถาบันผู้สูงอายุ กรมการแพทย์และคณะเทคนิคการแพทย์มหาวิทยาลัยมหิดล<br>
+                            ติดต่อขอทราบรายละเอียดเพิ่มเติม เสนอข้อแนะนำ ร้องเรียนปัญหาการใช้งานได้ที่ อ.ดร.ลิขิต ปรียานนท์ อีเมล
+                            <span class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </span>&nbsp;likit.pre@mahidol.edu<br>
+                            The web site is powered by Python + Flask + Bulma + Knockout.js + jQuery + MongoDB
+                        </p>
+                    </div>
+                </div>
+            </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous">

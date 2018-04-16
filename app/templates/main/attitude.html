@@ -1,9 +1,39 @@
 <div data-bind="page: {id: 'attitude', afterShow: function() { currPageId('attitude'); }}">
+    <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+        <ul>
+            <li>
+                <a data-bind="page-href: '../mna'">
+                <span class="icon">
+                    <i class="fa fa-arrow-circle-left"></i>
+                </span>
+                &nbsp;แบบประเมินภาวะโภชนาการ (MNA)
+                </a>
+            </li>
+        </ul>
+    </div> <!-- tabs -->
     <div class="box">
         <h1 class="title is-size-5">แบบสอบถามทัศนคติและความรู้เกี่ยวกับภาวะสมองเสื่อมและโรคอัลไซเมอร์</h1>
         <br>
         <h1 class="subtitle">แบบสอบถามข้อมูลหลังร่วมกิจกรรมการให้ความรู้ของผู้เข้าร่วมวิจัย/อาสาสมัคร</h1>
-        <table class="table is-narrow">
+        <table class="table">
+            <tr>
+                <td colspan="3">
+                    <div class="field">
+                        <div class="control">
+                            <input type="text" class="input"
+                                placeholder="ชุมชน/พื้นที่" data-bind="value: attd_community">
+                        </div>
+                    </div>
+                </td>
+                <td colspan="2">
+                    <div class="field">
+                        <div class="control">
+                            <input type="text" class="input"
+                                placeholder="เลขรหัส" data-bind="value: attd_code">
+                        </div>
+                    </div>
+                </td>
+            </tr>
             <tr>
                 <td>1.</td>
                 <td>ท่านรู้สึกว่าวิธีการสอนเหมาะสมหรือไม่</td>
@@ -86,7 +116,665 @@
                         </div>
                     </td>
                 </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>คนรอบข้างมักจะเข้ามาควบคุมการตัดสินใจของผู้ป่วยโรคสมองเสื่อมมากเกินไป</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_2">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>เมื่อเป็นโรคสมองเสื่อม ลักษณะตัวตนของคนที่คุณคุ้นเคยจะค่อยๆ หายไป</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_3">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>ทันทีที่ผู้ป่วยได้รับการวินิจฉัยว่าเป็นโรคสมองเสื่อม เขาจะได้รับการปฏิบัติราวกับว่าเขาไม่สามารถคิดอะไรได้เองเลย</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_4">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>สำหรับผู้ป่วยโรคสมองเสื่อมในระยะที่เป็นมากแล้ว ฉันไม่คิดว่าชีวิตที่เหลือจะมีค่าที่อยู่ต่อไป</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_5">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>ผู้ป่วยโรคสมองเสื่อมจะเหมือนเด็กและต้องได้รับการดูแลเหมือนที่คุณดูแลเด็กๆ</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_6">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>ผู้ป่วยโรคสมองเสื่อมควรจะมีส่วนร่วมทำกิจกรรมต่างๆ ในชุมชน</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_7">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>เป็นการดีกว่าทั้งสำหรับผู้ป่วยโรคสมองเสื่อมและสมาชิกในครอบครัวที่จะให้ผู้ป่วยได้รับการดูแลในบ้านพักคนชรา</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_8">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>ไม่มีประโยชน์อะไรที่จะบอกให้ผู้ป่วยสมองเสื่อมรู้ตัวว่าเป็นโรคสมองเสื่อม</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_9">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>ผู้ที่เพิ่งได้รับการวินิจฉัยว่าเป็นโรคสมองเสื่อมไม่สามารถตัดสินใจเกี่ยวกับการดูแลตนเองได้</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_10">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td>ไม่มีประโยชน์ที่จะพยายามพูดคุยกับผู้ป่วยโรคสมองเสื่อมเพราะเขาไม่สามารถเข้าใจได้</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_11">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="subtitle">แบบสอบถามความรู้เกี่ยวกับภาวะสมองเสื่อมและโรคอัลไซเมอร์</h1>
+        <table class="table is-narrow">
+            <col width="5%">
+            <col width="60%">
+            <col width="20%">
+            <col width="15%">
+            <thead>
+                <tr>
+                    <th>ข้อ</th>
+                    <th>คำถาม</th>
+                    <th>ความเห็นของท่าน</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td>ภาวะสมองเสื่อมอาจเกิดจากสาเหตุที่สามารถแก้ไขหรือหยุดยั้งให้เลวลงได้</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_1" value="1" data-bind="checked: know_1">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_1" value="0" data-bind="checked: know_1">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>การใช้ยารักษาโรคบางชนิดอาจทำให้เกิดอาการหลงลืมหรือสับสนได้</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_2" value="1" data-bind="checked: know_2">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_2" value="0" data-bind="checked: know_2">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>การหยุดทำกิจกรรมต่างๆในสังคม อาจจะเป็นสัญญาณของโรคอัลไซเมอร์</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_3" value="1" data-bind="checked: know_3">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_3" value="0" data-bind="checked: know_3">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>การลืมชื่อสิ่งของที่คุ้นเคยแม้ภายในเวลาเพียงไม่กี่นาที อาจจะเป็นสัญญาณของโรคอัลไซเมอร์</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_4" value="1" data-bind="checked: know_4">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_4" value="0" data-bind="checked: know_4">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>ผู้ป่วยอัลไซเมอร์ระยะแรกอาจจะหลงทางได้ในขณะขับรถไปสถานที่ที่คุ้นเคย</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_5" value="1" data-bind="checked: know_5">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_5" value="0" data-bind="checked: know_5">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>การมีปัญหาในการจัดการเรื่องการเงิน อาจจะเป็นสัญญาณของโรคอัลไซเมอร์</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_6" value="1" data-bind="checked: know_6">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_6" value="0" data-bind="checked: know_6">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>การถามคำถามเดิมซ้ำบ่อยๆ อาจจะเป็นสัญญาณของโรคอัลไซเมอร์</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_7" value="1" data-bind="checked: know_7">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_7" value="0" data-bind="checked: know_7">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>หนึ่งในอาการของโรคอัลไซเมอร์คือคิดว่ามีคนมาขโมยของของตนเอง (ในความเป็นจริงไม่มีใครมาขโมยของไป)</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_8" value="1" data-bind="checked: know_8">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_8" value="0" data-bind="checked: know_8">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>ผู้ป่วยอัลไซเมอร์ทุกคนจำเหตุการณ์ที่เกิดขึ้นไม่นานมานี้ได้ดีกว่าเหตุการณ์ที่เกิดขึ้นในอดีต</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_9" value="1" data-bind="checked: know_9">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_9" value="0" data-bind="checked: know_9">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>ความเครียดหรืออาการซึมเศร้าอาจจะทำให้สมองจำอะไรได้ไม่ดี</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_10" value="1" data-bind="checked: know_10">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_10" value="0" data-bind="checked: know_10">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td>ถ้าพ่อแม่เป็นอัลไซเมอร์ บุตรมีความเสี่ยงมากที่จะเป็นโรคนี้</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_11" value="1" data-bind="checked: know_11">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_11" value="0" data-bind="checked: know_11">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12.</td>
+                    <td>หลังจากเริ่มมีอาการของโรคอัลไซเมอร์ ผู้ป่วยจะมีอายุขัยเฉลี่ยอยู่ได้อีก 6-12 ปี</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_12" value="1" data-bind="checked: know_12">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_12" value="0" data-bind="checked: know_12">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13.</td>
+                    <td>โรคอัลไซเมอร์เป็นโรคสมองเสื่อมชนิดที่พบบ่อยที่สุด</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_13" value="1" data-bind="checked: know_13">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_13" value="0" data-bind="checked: know_13">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14.</td>
+                    <td>ยิ่งผู้ป่วยโรคอัลไซเมอร์ได้รับการรักษารวดเร็วเท่าไหร่ โอกาสที่จะชะลอตัวก็ยิ่งมีมากขึ้น</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_14" value="1" data-bind="checked: know_14">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_14" value="0" data-bind="checked: know_14">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15.</td>
+                    <td>โรคอัลไซเมอร์สามารถรักษาให้หายขาดได้</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_15" value="1" data-bind="checked: know_15">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_15" value="0" data-bind="checked: know_15">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16.</td>
+                    <td>การจดบันทึกช่วยเตือนความทรงจำ มีประโยชน์สำหรับผู้ป่วยอัลไซเมอร์ในระยะแรกๆ</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_16" value="1" data-bind="checked: know_16">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_16" value="0" data-bind="checked: know_16">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17.</td>
+                    <td>มียาที่ช่วยชะลออาการที่เลวลงของโรคอัลไซเมอร์</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_17" value="1" data-bind="checked: know_17">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_17" value="0" data-bind="checked: know_17">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>18.</td>
+                    <td>เมื่อเราพูดคุยกับผู้ป่วยสมองเสื่อม จำเป็นต้องพูดคุยด้วยน้ำเสียงที่อ่อนโยน ชัดถ้อยชัดคำ</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_18" value="1" data-bind="checked: know_18">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_18" value="0" data-bind="checked: know_18">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>19.</td>
+                    <td>เมื่อผู้ป่วยโรคอัลไซเมอร์เริ่มมีความยากลำบากในการดูแลตนเอง ผู้ดูแลควรให้การช่วยเหลือทั้งหมดในทันที</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_19" value="1" data-bind="checked: know_19">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_19" value="0" data-bind="checked: know_19">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>20.</td>
+                    <td>การอยู่ร่วมกับผู้อื่นอาจจะช่วยให้คุณคงความทรงจำได้ดี</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_20" value="1" data-bind="checked: know_20">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_20" value="0" data-bind="checked: know_20">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>21.</td>
+                    <td>อาหารที่ดีและการออกกำลังกายสม่ำเสมออาจจะช่วยลดความเสี่ยงภาวะสมองเสื่อมได้</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_21" value="1" data-bind="checked: know_21">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_21" value="0" data-bind="checked: know_21">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>22.</td>
+                    <td>มียาที่สามารถป้องกันการเกิดโรคอัลไซเมอร์ได้</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_22" value="1" data-bind="checked: know_22">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_22" value="0" data-bind="checked: know_22">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>23.</td>
+                    <td>โรคอัลไซเมอร์เป็นภาวะปกติของผู้ที่มีอายุเพิ่มขึ้น</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="know_23" value="1" data-bind="checked: know_23">
+                                    ถูก
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="know_23" value="0" data-bind="checked: know_23">
+                                    ผิด
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
+    <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+        <ul>
+            <li>
+                <a data-bind="page-href: '../mna'">
+                <span class="icon">
+                    <i class="fa fa-arrow-circle-left"></i>
+                </span>
+                &nbsp;แบบประเมินภาวะโภชนาการ (MNA)
+                </a>
+            </li>
+            <li>
+                <a data-bind="click: submitResults">
+                บันทึก&nbsp;
+                <span class="icon">
+                    <i class="fa fa-save"></i>
+                </span>
+                </a>
+            </li>
+            <li>
+                <a data-bind="page-href: '../end'">
+                สิ้นสุดการทำแบบสอบถาม&nbsp;
+                <span class="icon">
+                    <i class="fa fa-arrow-circle-right"></i>
+                </span>
+                </a>
+            </li>
+        </ul>
+    </div> <!-- tabs -->
 </div>

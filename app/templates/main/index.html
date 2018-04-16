@@ -82,6 +82,8 @@
                                     การประเมินระดับความปวด</a></li>
                                 <li><a data-bind="page-href:'mna', css: {'is-active': currPageId() === 'mna'}">
                                     แบบประเมินภาวะโภชนาการ</a></li>
+                                <li><a data-bind="page-href:'attitude', css: {'is-active': currPageId() === 'attitude'}">
+                                    แบบสอบถามทัศนคติและความรู้เกี่ยวกับภาวะสมองเสื่อมและโรคอัลไซเมอร์</a></li>
                             </ul>
                         </aside>
                     </div>
@@ -99,6 +101,7 @@
                       {% include "main/mmse.html" %}
                       {% include "main/pain.html" %}
                       {% include "main/mna.html" %}
+                      {% include "main/attitude.html" %}
                       {% include "main/records.html" %}
                     </div> <!-- column -->
                 </div>

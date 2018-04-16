@@ -528,6 +528,13 @@ var ViewModel = function() {
       }
     });
 
+    self.train_1 = ko.observable();
+    self.train_1_ans = ko.observable();
+    self.train_2 = ko.observable();
+
+    self.attd_1 = ko.observable();
+    self.attd_2 = ko.observable();
+
     self.filteredHospitals = ko.observableArray();
     self.selectedHospital = ko.observable();
     self.hospitalId = ko.observable();

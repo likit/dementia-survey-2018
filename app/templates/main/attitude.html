@@ -1,0 +1,92 @@
+<div data-bind="page: {id: 'attitude', afterShow: function() { currPageId('attitude'); }}">
+    <div class="box">
+        <h1 class="title is-size-5">แบบสอบถามทัศนคติและความรู้เกี่ยวกับภาวะสมองเสื่อมและโรคอัลไซเมอร์</h1>
+        <br>
+        <h1 class="subtitle">แบบสอบถามข้อมูลหลังร่วมกิจกรรมการให้ความรู้ของผู้เข้าร่วมวิจัย/อาสาสมัคร</h1>
+        <table class="table is-narrow">
+            <tr>
+                <td>1.</td>
+                <td>ท่านรู้สึกว่าวิธีการสอนเหมาะสมหรือไม่</td>
+                <td>
+                    <div class="field">
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" name="train_1" value="1" data-bind="checked: train_1">
+                                เหมาะสม
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="train_1" value="2" data-bind="checked: train_1">
+                                ไม่เหมาะสม
+                            </label>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="field">
+                        <div class="control">
+                            <input type="text" class="input" placeholder="ควรสอนอย่างไร" data-bind="value: train_1_ans">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>ท่านคิดว่าระยะเวลาในการสอนเป็นอย่างไร</td>
+                <td colspan="2">
+                    <div class="field">
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" name="train_2" value="1" data-bind="checked: train_2">
+                                น้อยไป
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="train_2" value="2" data-bind="checked: train_2">
+                                กำลังพอดี
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="train_2" value="3" data-bind="checked: train_2">
+                                มากไป
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <h1 class="subtitle">แบบสอบถามทัศนคติเกี่ยวกับภาวะสมองเสื่อมและโรคอัลไซเมอร์</h1>
+        <table class="table is-narrow">
+            <col width="5%">
+            <col width="60%">
+            <col width="20%">
+            <col width="15%">
+            <thead>
+                <tr>
+                    <th>ข้อ</th>
+                    <th>คำถาม</th>
+                    <th>ความเห็นของท่าน</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td>เมื่อถึงเวลาที่ต้องดูแลผู้ป่วยสมองเสื่อม คุณสามารถช่วยดูแลรักษาความสะอาดให้เขามีสุขภาพดี และปลอดภัยได้</td>
+                    <td>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select data-bind="value: attd_1">
+                                        <option value="">โปรดเลือก</option>
+                                        <option value="5">เห็นด้วยอย่างยิ่ง</option>
+                                        <option value="4">เห็นด้วย</option>
+                                        <option value="3">เฉยๆ</option>
+                                        <option value="2">ไม่เห็นด้วย</option>
+                                        <option value="1">ไม่เห็นด้วยอย่างยิ่ง</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

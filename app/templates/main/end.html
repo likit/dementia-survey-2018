@@ -1,0 +1,28 @@
+<div data-bind="page: {id: 'end', afterShow: function() { currPageId('end'); }}">
+    <div class="box">
+        <h1 class="title">The End</h1>
+        <article>
+            <p>กรุณาคลิกที่ปุ่มบันทึกข้อมูลเพื่อบันทึกข้อมูลล่าสุดลงฐานข้อมูล ท่านสามารถกลับมาแก้ไขข้อมูลเพิ่มเติมได้ที่เมนูด้านบน</p>
+        </article>
+    </div>
+    <div class="tabs is-fullwidth is-toggle is-toggle-rounded">
+        <ul>
+            <li>
+                <a data-bind="page-href: '../attitude'">
+                <span class="icon">
+                    <i class="fa fa-arrow-circle-left"></i>
+                </span>
+                &nbsp;แบบทดสอบถามทัศนคติและความรู้ฯ
+                </a>
+            </li>
+            <li class="is-active">
+                <a data-bind="click: submitResults">
+                บันทึก&nbsp;
+                <span class="icon">
+                    <i class="fa fa-save"></i>
+                </span>
+                </a>
+            </li>
+        </ul>
+    </div> <!-- tabs -->
+</div>
